@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html>
+<head prefix='og: http://ogp.me/ns'>
+<script>
+  WWW_SUBDOMAIN = 'www';
+  
+  window.getCookie = function(key) {
+    var b = document.cookie.match('(^|;)\\s*' + key + '\\s*=\\s*([^;]+)');
+    return b ? decodeURIComponent(b.pop()).replace(/\+/g, " ") : '';
+  };
+</script>
+<script>
+  window['_fs_debug'] = false;
+  window['_fs_host'] = 'fullstory.com';
+  window['_fs_org'] = 'NGX3A';
+  window['_fs_namespace'] = 'FS';
+  (function(m,n,e,t,l,o,g,y){
+      if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+      g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+      o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_host+'/s/fs.js';
+      y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+      g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+      g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+      g.log = function(a,b) { g("log", [a,b]) };
+      g.consent=function(a){g("consent",!arguments.length||a)};
+      g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+      g.clearUserCookie=function(){};
+  })(window,document,window['_fs_namespace'],'script','user');
+  
+  if (!!getCookie('user.email')) {
+    FS.identify(getCookie('user.id'), {
+      displayName: getCookie('user.name') || getCookie('user.username'),
+      email: getCookie('user.email'),
+      organizationName: getCookie('organization.name'),
+    });
+  }
+</script>
+<script>
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])}; heap.load("2632674204");
+</script>
+<script>
+  var b = document.cookie.match('(^|;)\\s*' + 'user.id' + '\\s*=\\s*([^;]+)');
+  var userId = b ? decodeURIComponent(b.pop()) : '';
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-85457941-1', 'auto');
+  if (userId) { ga('set', 'userId', userId); }
+</script>
+<link href='/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='/site.webmanifest' rel='manifest'>
+<link color='#ff7f00' href='/safari-pinned-tab.svg' rel='mask-icon'>
+<meta content='#ffffff' name='theme-color'>
+<link rel="stylesheet" media="all" href="https://static.wikiful.com/assets/common-b80a1c0b8b5c166c5aa42933c9fa2c818c9d254d4203792d1ed77a9eac17a933.css" />
+<script src="https://static.wikiful.com/assets/common-2888c9cfafca76ffc09e511c8fbf0289de9f807fd61eed816bad9d57366745fe.js"></script>
+<!--[if lt IE 9]>
+<script src="https://static.wikiful.com/assets/html5shiv.min.js"></script>
+<![endif]-->
+
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"2319d11975","applicationID":"311639998","transactionName":"dV5ZRkIMWF5VQBxOC11YGEFYDEM=","queueTime":0,"applicationTime":48,"agent":""}</script>
+<script type="text/javascript">(window.NREUM||(NREUM={})).init={ajax:{deny_list:["bam.nr-data.net"]},feature_flags:["soft_nav"]};(window.NREUM||(NREUM={})).loader_config={licenseKey:"2319d11975",applicationID:"311639998",browserID:"311640856"};;/*! For license information please see nr-loader-rum-1.308.0.min.js.LICENSE.txt */
+(()=>{var e,t,r={163:(e,t,r)=>{"use strict";r.d(t,{j:()=>E});var n=r(384),i=r(1741);var a=r(2555);r(860).K7.genericEvents;const s="experimental.resources",o="register",c=e=>{if(!e||"string"!=typeof e)return!1;try{document.createDocumentFragment().querySelector(e)}catch{return!1}return!0};var d=r(2614),u=r(944),l=r(8122);const f="[data-nr-mask]",g=e=>(0,l.a)(e,(()=>{const e={feature_flags:[],experimental:{allow_registered_children:!1,resources:!1},mask_selector:"*",block_selector:"[data-nr-block]",mask_input_options:{color:!1,date:!1,"datetime-local":!1,email:!1,month:!1,number:!1,range:!1,search:!1,tel:!1,text:!1,time:!1,url:!1,week:!1,textarea:!1,select:!1,password:!0}};return{ajax:{deny_list:void 0,block_internal:!0,enabled:!0,autoStart:!0},api:{get allow_registered_children(){return e.feature_flags.includes(o)||e.experimental.allow_registered_children},set allow_registered_children(t){e.experimental.allow_registered_children=t},duplicate_registered_data:!1},browser_consent_mode:{enabled:!1},distributed_tracing:{enabled:void 0,exclude_newrelic_header:void 0,cors_use_newrelic_header:void 0,cors_use_tracecontext_headers:void 0,allowed_origins:void 0},get feature_flags(){return e.feature_flags},set feature_flags(t){e.feature_flags=t},generic_events:{enabled:!0,autoStart:!0},harvest:{interval:30},jserrors:{enabled:!0,autoStart:!0},logging:{enabled:!0,autoStart:!0},metrics:{enabled:!0,autoStart:!0},obfuscate:void 0,page_action:{enabled:!0},page_view_event:{enabled:!0,autoStart:!0},page_view_timing:{enabled:!0,autoStart:!0},performance:{capture_marks:!1,capture_measures:!1,capture_detail:!0,resources:{get enabled(){return e.feature_flags.includes(s)||e.experimental.resources},set enabled(t){e.experimental.resources=t},asset_types:[],first_party_domains:[],ignore_newrelic:!0}},privacy:{cookies_enabled:!0},proxy:{assets:void 0,beacon:void 0},session:{expiresMs:d.wk,inactiveMs:d.BB},session_replay:{autoStart:!0,enabled:!1,preload:!1,sampling_rate:10,error_sampling_rate:100,collect_fonts:!1,inline_images:!1,fix_stylesheets:!0,mask_all_inputs:!0,get mask_text_selector(){return e.mask_selector},set mask_text_selector(t){c(t)?e.mask_selector="".concat(t,",").concat(f):""===t||null===t?e.mask_selector=f:(0,u.R)(5,t)},get block_class(){return"nr-block"},get ignore_class(){return"nr-ignore"},get mask_text_class(){return"nr-mask"},get block_selector(){return e.block_selector},set block_selector(t){c(t)?e.block_selector+=",".concat(t):""!==t&&(0,u.R)(6,t)},get mask_input_options(){return e.mask_input_options},set mask_input_options(t){t&&"object"==typeof t?e.mask_input_options={...t,password:!0}:(0,u.R)(7,t)}},session_trace:{enabled:!0,autoStart:!0},soft_navigations:{enabled:!0,autoStart:!0},spa:{enabled:!0,autoStart:!0},ssl:void 0,user_actions:{enabled:!0,elementAttributes:["id","className","tagName","type"]}}})());var p=r(6154),m=r(9324);let h=0;const v={buildEnv:m.F3,distMethod:m.Xs,version:m.xv,originTime:p.WN},b={consented:!1},y={appMetadata:{},get consented(){return this.session?.state?.consent||b.consented},set consented(e){b.consented=e},customTransaction:void 0,denyList:void 0,disabled:!1,harvester:void 0,isolatedBacklog:!1,isRecording:!1,loaderType:void 0,maxBytes:3e4,obfuscator:void 0,onerror:void 0,ptid:void 0,releaseIds:{},session:void 0,timeKeeper:void 0,registeredEntities:[],jsAttributesMetadata:{bytes:0},get harvestCount(){return++h}},_=e=>{const t=(0,l.a)(e,y),r=Object.keys(v).reduce((e,t)=>(e[t]={value:v[t],writable:!1,configurable:!0,enumerable:!0},e),{});return Object.defineProperties(t,r)};var w=r(5701);const x=e=>{const t=e.startsWith("http");e+="/",r.p=t?e:"https://"+e};var R=r(7836),k=r(3241);const A={accountID:void 0,trustKey:void 0,agentID:void 0,licenseKey:void 0,applicationID:void 0,xpid:void 0},S=e=>(0,l.a)(e,A),T=new Set;function E(e,t={},r,s){let{init:o,info:c,loader_config:d,runtime:u={},exposed:l=!0}=t;if(!c){const e=(0,n.pV)();o=e.init,c=e.info,d=e.loader_config}e.init=g(o||{}),e.loader_config=S(d||{}),c.jsAttributes??={},p.bv&&(c.jsAttributes.isWorker=!0),e.info=(0,a.D)(c);const f=e.init,m=[c.beacon,c.errorBeacon];T.has(e.agentIdentifier)||(f.proxy.assets&&(x(f.proxy.assets),m.push(f.proxy.assets)),f.proxy.beacon&&m.push(f.proxy.beacon),e.beacons=[...m],function(e){const t=(0,n.pV)();Object.getOwnPropertyNames(i.W.prototype).forEach(r=>{const n=i.W.prototype[r];if("function"!=typeof n||"constructor"===n)return;let a=t[r];e[r]&&!1!==e.exposed&&"micro-agent"!==e.runtime?.loaderType&&(t[r]=(...t)=>{const n=e[r](...t);return a?a(...t):n})})}(e),(0,n.US)("activatedFeatures",w.B)),u.denyList=[...f.ajax.deny_list||[],...f.ajax.block_internal?m:[]],u.ptid=e.agentIdentifier,u.loaderType=r,e.runtime=_(u),T.has(e.agentIdentifier)||(e.ee=R.ee.get(e.agentIdentifier),e.exposed=l,(0,k.W)({agentIdentifier:e.agentIdentifier,drained:!!w.B?.[e.agentIdentifier],type:"lifecycle",name:"initialize",feature:void 0,data:e.config})),T.add(e.agentIdentifier)}},384:(e,t,r)=>{"use strict";r.d(t,{NT:()=>s,US:()=>u,Zm:()=>o,bQ:()=>d,dV:()=>c,pV:()=>l});var n=r(6154),i=r(1863),a=r(1910);const s={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net"};function o(){return n.gm.NREUM||(n.gm.NREUM={}),void 0===n.gm.newrelic&&(n.gm.newrelic=n.gm.NREUM),n.gm.NREUM}function c(){let e=o();return e.o||(e.o={ST:n.gm.setTimeout,SI:n.gm.setImmediate||n.gm.setInterval,CT:n.gm.clearTimeout,XHR:n.gm.XMLHttpRequest,REQ:n.gm.Request,EV:n.gm.Event,PR:n.gm.Promise,MO:n.gm.MutationObserver,FETCH:n.gm.fetch,WS:n.gm.WebSocket},(0,a.i)(...Object.values(e.o))),e}function d(e,t){let r=o();r.initializedAgents??={},t.initializedAt={ms:(0,i.t)(),date:new Date},r.initializedAgents[e]=t}function u(e,t){o()[e]=t}function l(){return function(){let e=o();const t=e.info||{};e.info={beacon:s.beacon,errorBeacon:s.errorBeacon,...t}}(),function(){let e=o();const t=e.init||{};e.init={...t}}(),c(),function(){let e=o();const t=e.loader_config||{};e.loader_config={...t}}(),o()}},782:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewTiming},860:(e,t,r)=>{"use strict";r.d(t,{$J:()=>u,K7:()=>c,P3:()=>d,XX:()=>i,Yy:()=>o,df:()=>a,qY:()=>n,v4:()=>s});const n="events",i="jserrors",a="browser/blobs",s="rum",o="browser/logs",c={ajax:"ajax",genericEvents:"generic_events",jserrors:i,logging:"logging",metrics:"metrics",pageAction:"page_action",pageViewEvent:"page_view_event",pageViewTiming:"page_view_timing",sessionReplay:"session_replay",sessionTrace:"session_trace",softNav:"soft_navigations",spa:"spa"},d={[c.pageViewEvent]:1,[c.pageViewTiming]:2,[c.metrics]:3,[c.jserrors]:4,[c.spa]:5,[c.ajax]:6,[c.sessionTrace]:7,[c.softNav]:8,[c.sessionReplay]:9,[c.logging]:10,[c.genericEvents]:11},u={[c.pageViewEvent]:s,[c.pageViewTiming]:n,[c.ajax]:n,[c.spa]:n,[c.softNav]:n,[c.metrics]:i,[c.jserrors]:i,[c.sessionTrace]:a,[c.sessionReplay]:a,[c.logging]:o,[c.genericEvents]:"ins"}},944:(e,t,r)=>{"use strict";r.d(t,{R:()=>i});var n=r(3241);function i(e,t){"function"==typeof console.debug&&(console.debug("New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(e),t),(0,n.W)({agentIdentifier:null,drained:null,type:"data",name:"warn",feature:"warn",data:{code:e,secondary:t}}))}},1687:(e,t,r)=>{"use strict";r.d(t,{Ak:()=>d,Ze:()=>f,x3:()=>u});var n=r(3241),i=r(7836),a=r(3606),s=r(860),o=r(2646);const c={};function d(e,t){const r={staged:!1,priority:s.P3[t]||0};l(e),c[e].get(t)||c[e].set(t,r)}function u(e,t){e&&c[e]&&(c[e].get(t)&&c[e].delete(t),p(e,t,!1),c[e].size&&g(e))}function l(e){if(!e)throw new Error("agentIdentifier required");c[e]||(c[e]=new Map)}function f(e="",t="feature",r=!1){if(l(e),!e||!c[e].get(t)||r)return p(e,t);c[e].get(t).staged=!0,g(e)}function g(e){const t=Array.from(c[e]);t.every(([e,t])=>t.staged)&&(t.sort((e,t)=>e[1].priority-t[1].priority),t.forEach(([t])=>{c[e].delete(t),p(e,t)}))}function p(e,t,r=!0){const s=e?i.ee.get(e):i.ee,c=a.i.handlers;if(!s.aborted&&s.backlog&&c){if((0,n.W)({agentIdentifier:e,type:"lifecycle",name:"drain",feature:t}),r){const e=s.backlog[t],r=c[t];if(r){for(let t=0;e&&t<e.length;++t)m(e[t],r);Object.entries(r).forEach(([e,t])=>{Object.values(t||{}).forEach(t=>{t[0]?.on&&t[0]?.context()instanceof o.y&&t[0].on(e,t[1])})})}}s.isolatedBacklog||delete c[t],s.backlog[t]=null,s.emit("drain-"+t,[])}}function m(e,t){var r=e[1];Object.values(t[r]||{}).forEach(t=>{var r=e[0];if(t[0]===r){var n=t[1],i=e[3],a=e[2];n.apply(i,a)}})}},1738:(e,t,r)=>{"use strict";r.d(t,{U:()=>g,Y:()=>f});var n=r(3241),i=r(9908),a=r(1863),s=r(944),o=r(5701),c=r(3969),d=r(8362),u=r(860),l=r(4261);function f(e,t,r,a){const f=a||r;!f||f[e]&&f[e]!==d.d.prototype[e]||(f[e]=function(){(0,i.p)(c.xV,["API/"+e+"/called"],void 0,u.K7.metrics,r.ee),(0,n.W)({agentIdentifier:r.agentIdentifier,drained:!!o.B?.[r.agentIdentifier],type:"data",name:"api",feature:l.Pl+e,data:{}});try{return t.apply(this,arguments)}catch(e){(0,s.R)(23,e)}})}function g(e,t,r,n,s){const o=e.info;null===r?delete o.jsAttributes[t]:o.jsAttributes[t]=r,(s||null===r)&&(0,i.p)(l.Pl+n,[(0,a.t)(),t,r],void 0,"session",e.ee)}},1741:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(944),i=r(4261);class a{#e(e,...t){if(this[e]!==a.prototype[e])return this[e](...t);(0,n.R)(35,e)}addPageAction(e,t){return this.#e(i.hG,e,t)}register(e){return this.#e(i.eY,e)}recordCustomEvent(e,t){return this.#e(i.fF,e,t)}setPageViewName(e,t){return this.#e(i.Fw,e,t)}setCustomAttribute(e,t,r){return this.#e(i.cD,e,t,r)}noticeError(e,t){return this.#e(i.o5,e,t)}setUserId(e,t=!1){return this.#e(i.Dl,e,t)}setApplicationVersion(e){return this.#e(i.nb,e)}setErrorHandler(e){return this.#e(i.bt,e)}addRelease(e,t){return this.#e(i.k6,e,t)}log(e,t){return this.#e(i.$9,e,t)}start(){return this.#e(i.d3)}finished(e){return this.#e(i.BL,e)}recordReplay(){return this.#e(i.CH)}pauseReplay(){return this.#e(i.Tb)}addToTrace(e){return this.#e(i.U2,e)}setCurrentRouteName(e){return this.#e(i.PA,e)}interaction(e){return this.#e(i.dT,e)}wrapLogger(e,t,r){return this.#e(i.Wb,e,t,r)}measure(e,t){return this.#e(i.V1,e,t)}consent(e){return this.#e(i.Pv,e)}}},1863:(e,t,r)=>{"use strict";function n(){return Math.floor(performance.now())}r.d(t,{t:()=>n})},1910:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(944);const i=new Map;function a(...e){return e.every(e=>{if(i.has(e))return i.get(e);const t="function"==typeof e?e.toString():"",r=t.includes("[native code]"),a=t.includes("nrWrapper");return r||a||(0,n.R)(64,e?.name||t),i.set(e,r),r})}},2555:(e,t,r)=>{"use strict";r.d(t,{D:()=>o,f:()=>s});var n=r(384),i=r(8122);const a={beacon:n.NT.beacon,errorBeacon:n.NT.errorBeacon,licenseKey:void 0,applicationID:void 0,sa:void 0,queueTime:void 0,applicationTime:void 0,ttGuid:void 0,user:void 0,account:void 0,product:void 0,extra:void 0,jsAttributes:{},userAttributes:void 0,atts:void 0,transactionName:void 0,tNamePlain:void 0};function s(e){try{return!!e.licenseKey&&!!e.errorBeacon&&!!e.applicationID}catch(e){return!1}}const o=e=>(0,i.a)(e,a)},2614:(e,t,r)=>{"use strict";r.d(t,{BB:()=>s,H3:()=>n,g:()=>d,iL:()=>c,tS:()=>o,uh:()=>i,wk:()=>a});const n="NRBA",i="SESSION",a=144e5,s=18e5,o={STARTED:"session-started",PAUSE:"session-pause",RESET:"session-reset",RESUME:"session-resume",UPDATE:"session-update"},c={SAME_TAB:"same-tab",CROSS_TAB:"cross-tab"},d={OFF:0,FULL:1,ERROR:2}},2646:(e,t,r)=>{"use strict";r.d(t,{y:()=>n});class n{constructor(e){this.contextId=e}}},2843:(e,t,r)=>{"use strict";r.d(t,{G:()=>a,u:()=>i});var n=r(3878);function i(e,t=!1,r,i){(0,n.DD)("visibilitychange",function(){if(t)return void("hidden"===document.visibilityState&&e());e(document.visibilityState)},r,i)}function a(e,t,r){(0,n.sp)("pagehide",e,t,r)}},3241:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(6154);const i="newrelic";function a(e={}){try{n.gm.dispatchEvent(new CustomEvent(i,{detail:e}))}catch(e){}}},3606:(e,t,r)=>{"use strict";r.d(t,{i:()=>a});var n=r(9908);a.on=s;var i=a.handlers={};function a(e,t,r,a){s(a||n.d,i,e,t,r)}function s(e,t,r,i,a){a||(a="feature"),e||(e=n.d);var s=t[a]=t[a]||{};(s[r]=s[r]||[]).push([e,i])}},3878:(e,t,r)=>{"use strict";function n(e,t){return{capture:e,passive:!1,signal:t}}function i(e,t,r=!1,i){window.addEventListener(e,t,n(r,i))}function a(e,t,r=!1,i){document.addEventListener(e,t,n(r,i))}r.d(t,{DD:()=>a,jT:()=>n,sp:()=>i})},3969:(e,t,r)=>{"use strict";r.d(t,{TZ:()=>n,XG:()=>o,rs:()=>i,xV:()=>s,z_:()=>a});const n=r(860).K7.metrics,i="sm",a="cm",s="storeSupportabilityMetrics",o="storeEventMetrics"},4234:(e,t,r)=>{"use strict";r.d(t,{W:()=>a});var n=r(7836),i=r(1687);class a{constructor(e,t){this.agentIdentifier=e,this.ee=n.ee.get(e),this.featureName=t,this.blocked=!1}deregisterDrain(){(0,i.x3)(this.agentIdentifier,this.featureName)}}},4261:(e,t,r)=>{"use strict";r.d(t,{$9:()=>d,BL:()=>o,CH:()=>g,Dl:()=>_,Fw:()=>y,PA:()=>h,Pl:()=>n,Pv:()=>k,Tb:()=>l,U2:()=>a,V1:()=>R,Wb:()=>x,bt:()=>b,cD:()=>v,d3:()=>w,dT:()=>c,eY:()=>p,fF:()=>f,hG:()=>i,k6:()=>s,nb:()=>m,o5:()=>u});const n="api-",i="addPageAction",a="addToTrace",s="addRelease",o="finished",c="interaction",d="log",u="noticeError",l="pauseReplay",f="recordCustomEvent",g="recordReplay",p="register",m="setApplicationVersion",h="setCurrentRouteName",v="setCustomAttribute",b="setErrorHandler",y="setPageViewName",_="setUserId",w="start",x="wrapLogger",R="measure",k="consent"},5289:(e,t,r)=>{"use strict";r.d(t,{GG:()=>s,Qr:()=>c,sB:()=>o});var n=r(3878),i=r(6389);function a(){return"undefined"==typeof document||"complete"===document.readyState}function s(e,t){if(a())return e();const r=(0,i.J)(e),s=setInterval(()=>{a()&&(clearInterval(s),r())},500);(0,n.sp)("load",r,t)}function o(e){if(a())return e();(0,n.DD)("DOMContentLoaded",e)}function c(e){if(a())return e();(0,n.sp)("popstate",e)}},5607:(e,t,r)=>{"use strict";r.d(t,{W:()=>n});const n=(0,r(9566).bz)()},5701:(e,t,r)=>{"use strict";r.d(t,{B:()=>a,t:()=>s});var n=r(3241);const i=new Set,a={};function s(e,t){const r=t.agentIdentifier;a[r]??={},e&&"object"==typeof e&&(i.has(r)||(t.ee.emit("rumresp",[e]),a[r]=e,i.add(r),(0,n.W)({agentIdentifier:r,loaded:!0,drained:!0,type:"lifecycle",name:"load",feature:void 0,data:e})))}},6154:(e,t,r)=>{"use strict";r.d(t,{OF:()=>c,RI:()=>i,WN:()=>u,bv:()=>a,eN:()=>l,gm:()=>s,mw:()=>o,sb:()=>d});var n=r(1863);const i="undefined"!=typeof window&&!!window.document,a="undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self.navigator instanceof WorkerNavigator||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis.navigator instanceof WorkerNavigator),s=i?window:"undefined"!=typeof WorkerGlobalScope&&("undefined"!=typeof self&&self instanceof WorkerGlobalScope&&self||"undefined"!=typeof globalThis&&globalThis instanceof WorkerGlobalScope&&globalThis),o=Boolean("hidden"===s?.document?.visibilityState),c=/iPad|iPhone|iPod/.test(s.navigator?.userAgent),d=c&&"undefined"==typeof SharedWorker,u=((()=>{const e=s.navigator?.userAgent?.match(/Firefox[/\s](\d+\.\d+)/);Array.isArray(e)&&e.length>=2&&e[1]})(),Date.now()-(0,n.t)()),l=()=>"undefined"!=typeof PerformanceNavigationTiming&&s?.performance?.getEntriesByType("navigation")?.[0]?.responseStart},6389:(e,t,r)=>{"use strict";function n(e,t=500,r={}){const n=r?.leading||!1;let i;return(...r)=>{n&&void 0===i&&(e.apply(this,r),i=setTimeout(()=>{i=clearTimeout(i)},t)),n||(clearTimeout(i),i=setTimeout(()=>{e.apply(this,r)},t))}}function i(e){let t=!1;return(...r)=>{t||(t=!0,e.apply(this,r))}}r.d(t,{J:()=>i,s:()=>n})},6630:(e,t,r)=>{"use strict";r.d(t,{T:()=>n});const n=r(860).K7.pageViewEvent},7699:(e,t,r)=>{"use strict";r.d(t,{It:()=>a,KC:()=>o,No:()=>i,qh:()=>s});var n=r(860);const i=16e3,a=1e6,s="SESSION_ERROR",o={[n.K7.logging]:!0,[n.K7.genericEvents]:!1,[n.K7.jserrors]:!1,[n.K7.ajax]:!1}},7836:(e,t,r)=>{"use strict";r.d(t,{P:()=>o,ee:()=>c});var n=r(384),i=r(8990),a=r(2646),s=r(5607);const o="nr@context:".concat(s.W),c=function e(t,r){var n={},s={},u={},l=!1;try{l=16===r.length&&d.initializedAgents?.[r]?.runtime.isolatedBacklog}catch(e){}var f={on:p,addEventListener:p,removeEventListener:function(e,t){var r=n[e];if(!r)return;for(var i=0;i<r.length;i++)r[i]===t&&r.splice(i,1)},emit:function(e,r,n,i,a){!1!==a&&(a=!0);if(c.aborted&&!i)return;t&&a&&t.emit(e,r,n);var o=g(n);m(e).forEach(e=>{e.apply(o,r)});var d=v()[s[e]];d&&d.push([f,e,r,o]);return o},get:h,listeners:m,context:g,buffer:function(e,t){const r=v();if(t=t||"feature",f.aborted)return;Object.entries(e||{}).forEach(([e,n])=>{s[n]=t,t in r||(r[t]=[])})},abort:function(){f._aborted=!0,Object.keys(f.backlog).forEach(e=>{delete f.backlog[e]})},isBuffering:function(e){return!!v()[s[e]]},debugId:r,backlog:l?{}:t&&"object"==typeof t.backlog?t.backlog:{},isolatedBacklog:l};return Object.defineProperty(f,"aborted",{get:()=>{let e=f._aborted||!1;return e||(t&&(e=t.aborted),e)}}),f;function g(e){return e&&e instanceof a.y?e:e?(0,i.I)(e,o,()=>new a.y(o)):new a.y(o)}function p(e,t){n[e]=m(e).concat(t)}function m(e){return n[e]||[]}function h(t){return u[t]=u[t]||e(f,t)}function v(){return f.backlog}}(void 0,"globalEE"),d=(0,n.Zm)();d.ee||(d.ee=c)},8122:(e,t,r)=>{"use strict";r.d(t,{a:()=>i});var n=r(944);function i(e,t){try{if(!e||"object"!=typeof e)return(0,n.R)(3);if(!t||"object"!=typeof t)return(0,n.R)(4);const r=Object.create(Object.getPrototypeOf(t),Object.getOwnPropertyDescriptors(t)),a=0===Object.keys(r).length?e:r;for(let s in a)if(void 0!==e[s])try{if(null===e[s]){r[s]=null;continue}Array.isArray(e[s])&&Array.isArray(t[s])?r[s]=Array.from(new Set([...e[s],...t[s]])):"object"==typeof e[s]&&"object"==typeof t[s]?r[s]=i(e[s],t[s]):r[s]=e[s]}catch(e){r[s]||(0,n.R)(1,e)}return r}catch(e){(0,n.R)(2,e)}}},8362:(e,t,r)=>{"use strict";r.d(t,{d:()=>a});var n=r(9566),i=r(1741);class a extends i.W{agentIdentifier=(0,n.LA)(16)}},8374:(e,t,r)=>{r.nc=(()=>{try{return document?.currentScript?.nonce}catch(e){}return""})()},8990:(e,t,r)=>{"use strict";r.d(t,{I:()=>i});var n=Object.prototype.hasOwnProperty;function i(e,t,r){if(n.call(e,t))return e[t];var i=r();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(e,t,{value:i,writable:!0,enumerable:!1}),i}catch(e){}return e[t]=i,i}},9324:(e,t,r)=>{"use strict";r.d(t,{F3:()=>i,Xs:()=>a,xv:()=>n});const n="1.308.0",i="PROD",a="CDN"},9566:(e,t,r)=>{"use strict";r.d(t,{LA:()=>o,bz:()=>s});var n=r(6154);const i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";function a(e,t){return e?15&e[t]:16*Math.random()|0}function s(){const e=n.gm?.crypto||n.gm?.msCrypto;let t,r=0;return e&&e.getRandomValues&&(t=e.getRandomValues(new Uint8Array(30))),i.split("").map(e=>"x"===e?a(t,r++).toString(16):"y"===e?(3&a()|8).toString(16):e).join("")}function o(e){const t=n.gm?.crypto||n.gm?.msCrypto;let r,i=0;t&&t.getRandomValues&&(r=t.getRandomValues(new Uint8Array(e)));const s=[];for(var o=0;o<e;o++)s.push(a(r,i++).toString(16));return s.join("")}},9908:(e,t,r)=>{"use strict";r.d(t,{d:()=>n,p:()=>i});var n=r(7836).ee.get("handle");function i(e,t,r,i,a){a?(a.buffer([e],i),a.emit(e,t,r)):(n.buffer([e],i),n.emit(e,t,r))}}},n={};function i(e){var t=n[e];if(void 0!==t)return t.exports;var a=n[e]={exports:{}};return r[e](a,a.exports,i),a.exports}i.m=r,i.d=(e,t)=>{for(var r in t)i.o(t,r)&&!i.o(e,r)&&Object.defineProperty(e,r,{enumerable:!0,get:t[r]})},i.f={},i.e=e=>Promise.all(Object.keys(i.f).reduce((t,r)=>(i.f[r](e,t),t),[])),i.u=e=>"nr-rum-1.308.0.min.js",i.o=(e,t)=>Object.prototype.hasOwnProperty.call(e,t),e={},t="NRBA-1.308.0.PROD:",i.l=(r,n,a,s)=>{if(e[r])e[r].push(n);else{var o,c;if(void 0!==a)for(var d=document.getElementsByTagName("script"),u=0;u<d.length;u++){var l=d[u];if(l.getAttribute("src")==r||l.getAttribute("data-webpack")==t+a){o=l;break}}if(!o){c=!0;var f={296:"sha512-+MIMDsOcckGXa1EdWHqFNv7P+JUkd5kQwCBr3KE6uCvnsBNUrdSt4a/3/L4j4TxtnaMNjHpza2/erNQbpacJQA=="};(o=document.createElement("script")).charset="utf-8",i.nc&&o.setAttribute("nonce",i.nc),o.setAttribute("data-webpack",t+a),o.src=r,0!==o.src.indexOf(window.location.origin+"/")&&(o.crossOrigin="anonymous"),f[s]&&(o.integrity=f[s])}e[r]=[n];var g=(t,n)=>{o.onerror=o.onload=null,clearTimeout(p);var i=e[r];if(delete e[r],o.parentNode&&o.parentNode.removeChild(o),i&&i.forEach(e=>e(n)),t)return t(n)},p=setTimeout(g.bind(null,void 0,{type:"timeout",target:o}),12e4);o.onerror=g.bind(null,o.onerror),o.onload=g.bind(null,o.onload),c&&document.head.appendChild(o)}},i.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},i.p="https://js-agent.newrelic.com/",(()=>{var e={374:0,840:0};i.f.j=(t,r)=>{var n=i.o(e,t)?e[t]:void 0;if(0!==n)if(n)r.push(n[2]);else{var a=new Promise((r,i)=>n=e[t]=[r,i]);r.push(n[2]=a);var s=i.p+i.u(t),o=new Error;i.l(s,r=>{if(i.o(e,t)&&(0!==(n=e[t])&&(e[t]=void 0),n)){var a=r&&("load"===r.type?"missing":r.type),s=r&&r.target&&r.target.src;o.message="Loading chunk "+t+" failed: ("+a+": "+s+")",o.name="ChunkLoadError",o.type=a,o.request=s,n[1](o)}},"chunk-"+t,t)}};var t=(t,r)=>{var n,a,[s,o,c]=r,d=0;if(s.some(t=>0!==e[t])){for(n in o)i.o(o,n)&&(i.m[n]=o[n]);if(c)c(i)}for(t&&t(r);d<s.length;d++)a=s[d],i.o(e,a)&&e[a]&&e[a][0](),e[a]=0},r=self["webpackChunk:NRBA-1.308.0.PROD"]=self["webpackChunk:NRBA-1.308.0.PROD"]||[];r.forEach(t.bind(null,0)),r.push=t.bind(null,r.push.bind(r))})(),(()=>{"use strict";i(8374);var e=i(8362),t=i(860);const r=Object.values(t.K7);var n=i(163);var a=i(9908),s=i(1863),o=i(4261),c=i(1738);var d=i(1687),u=i(4234),l=i(5289),f=i(6154),g=i(944),p=i(384);const m=e=>f.RI&&!0===e?.privacy.cookies_enabled;function h(e){return!!(0,p.dV)().o.MO&&m(e)&&!0===e?.session_trace.enabled}var v=i(6389),b=i(7699);class y extends u.W{constructor(e,t){super(e.agentIdentifier,t),this.agentRef=e,this.abortHandler=void 0,this.featAggregate=void 0,this.loadedSuccessfully=void 0,this.onAggregateImported=new Promise(e=>{this.loadedSuccessfully=e}),this.deferred=Promise.resolve(),!1===e.init[this.featureName].autoStart?this.deferred=new Promise((t,r)=>{this.ee.on("manual-start-all",(0,v.J)(()=>{(0,d.Ak)(e.agentIdentifier,this.featureName),t()}))}):(0,d.Ak)(e.agentIdentifier,t)}importAggregator(e,t,r={}){if(this.featAggregate)return;const n=async()=>{let n;await this.deferred;try{if(m(e.init)){const{setupAgentSession:t}=await i.e(296).then(i.bind(i,3305));n=t(e)}}catch(e){(0,g.R)(20,e),this.ee.emit("internal-error",[e]),(0,a.p)(b.qh,[e],void 0,this.featureName,this.ee)}try{if(!this.#t(this.featureName,n,e.init))return(0,d.Ze)(this.agentIdentifier,this.featureName),void this.loadedSuccessfully(!1);const{Aggregate:i}=await t();this.featAggregate=new i(e,r),e.runtime.harvester.initializedAggregates.push(this.featAggregate),this.loadedSuccessfully(!0)}catch(e){(0,g.R)(34,e),this.abortHandler?.(),(0,d.Ze)(this.agentIdentifier,this.featureName,!0),this.loadedSuccessfully(!1),this.ee&&this.ee.abort()}};f.RI?(0,l.GG)(()=>n(),!0):n()}#t(e,r,n){if(this.blocked)return!1;switch(e){case t.K7.sessionReplay:return h(n)&&!!r;case t.K7.sessionTrace:return!!r;default:return!0}}}var _=i(6630),w=i(2614),x=i(3241);class R extends y{static featureName=_.T;constructor(e){var t;super(e,_.T),this.setupInspectionEvents(e.agentIdentifier),t=e,(0,c.Y)(o.Fw,function(e,r){"string"==typeof e&&("/"!==e.charAt(0)&&(e="/"+e),t.runtime.customTransaction=(r||"http://custom.transaction")+e,(0,a.p)(o.Pl+o.Fw,[(0,s.t)()],void 0,void 0,t.ee))},t),this.importAggregator(e,()=>i.e(296).then(i.bind(i,3943)))}setupInspectionEvents(e){const t=(t,r)=>{t&&(0,x.W)({agentIdentifier:e,timeStamp:t.timeStamp,loaded:"complete"===t.target.readyState,type:"window",name:r,data:t.target.location+""})};(0,l.sB)(e=>{t(e,"DOMContentLoaded")}),(0,l.GG)(e=>{t(e,"load")}),(0,l.Qr)(e=>{t(e,"navigate")}),this.ee.on(w.tS.UPDATE,(t,r)=>{(0,x.W)({agentIdentifier:e,type:"lifecycle",name:"session",data:r})})}}class k extends e.d{constructor(e){var t;(super(),f.gm)?(this.features={},(0,p.bQ)(this.agentIdentifier,this),this.desiredFeatures=new Set(e.features||[]),this.desiredFeatures.add(R),(0,n.j)(this,e,e.loaderType||"agent"),t=this,(0,c.Y)(o.cD,function(e,r,n=!1){if("string"==typeof e){if(["string","number","boolean"].includes(typeof r)||null===r)return(0,c.U)(t,e,r,o.cD,n);(0,g.R)(40,typeof r)}else(0,g.R)(39,typeof e)},t),function(e){(0,c.Y)(o.Dl,function(t,r=!1){if("string"!=typeof t&&null!==t)return void(0,g.R)(41,typeof t);const n=e.info.jsAttributes["enduser.id"];r&&null!=n&&n!==t?(0,a.p)(o.Pl+"setUserIdAndResetSession",[t],void 0,"session",e.ee):(0,c.U)(e,"enduser.id",t,o.Dl,!0)},e)}(this),function(e){(0,c.Y)(o.nb,function(t){if("string"==typeof t||null===t)return(0,c.U)(e,"application.version",t,o.nb,!1);(0,g.R)(42,typeof t)},e)}(this),function(e){(0,c.Y)(o.d3,function(){e.ee.emit("manual-start-all")},e)}(this),function(e){(0,c.Y)(o.Pv,function(t=!0){if("boolean"==typeof t){if((0,a.p)(o.Pl+o.Pv,[t],void 0,"session",e.ee),e.runtime.consented=t,t){const t=e.features.page_view_event;t.onAggregateImported.then(e=>{const r=t.featAggregate;e&&!r.sentRum&&r.sendRum()})}}else(0,g.R)(65,typeof t)},e)}(this),this.run()):(0,g.R)(21)}get config(){return{info:this.info,init:this.init,loader_config:this.loader_config,runtime:this.runtime}}get api(){return this}run(){try{const e=function(e){const t={};return r.forEach(r=>{t[r]=!!e[r]?.enabled}),t}(this.init),n=[...this.desiredFeatures];n.sort((e,r)=>t.P3[e.featureName]-t.P3[r.featureName]),n.forEach(r=>{if(!e[r.featureName]&&r.featureName!==t.K7.pageViewEvent)return;if(r.featureName===t.K7.spa)return void(0,g.R)(67);const n=function(e){switch(e){case t.K7.ajax:return[t.K7.jserrors];case t.K7.sessionTrace:return[t.K7.ajax,t.K7.pageViewEvent];case t.K7.sessionReplay:return[t.K7.sessionTrace];case t.K7.pageViewTiming:return[t.K7.pageViewEvent];default:return[]}}(r.featureName).filter(e=>!(e in this.features));n.length>0&&(0,g.R)(36,{targetFeature:r.featureName,missingDependencies:n}),this.features[r.featureName]=new r(this)})}catch(e){(0,g.R)(22,e);for(const e in this.features)this.features[e].abortHandler?.();const t=(0,p.Zm)();delete t.initializedAgents[this.agentIdentifier]?.features,delete this.sharedAggregator;return t.ee.get(this.agentIdentifier).abort(),!1}}}var A=i(2843),S=i(782);class T extends y{static featureName=S.T;constructor(e){super(e,S.T),f.RI&&((0,A.u)(()=>(0,a.p)("docHidden",[(0,s.t)()],void 0,S.T,this.ee),!0),(0,A.G)(()=>(0,a.p)("winPagehide",[(0,s.t)()],void 0,S.T,this.ee)),this.importAggregator(e,()=>i.e(296).then(i.bind(i,2117))))}}var E=i(3969);class I extends y{static featureName=E.TZ;constructor(e){super(e,E.TZ),f.RI&&document.addEventListener("securitypolicyviolation",e=>{(0,a.p)(E.xV,["Generic/CSPViolation/Detected"],void 0,this.featureName,this.ee)}),this.importAggregator(e,()=>i.e(296).then(i.bind(i,9623)))}}new k({features:[R,T,I],loaderType:"lite"})})()})();</script>
+<title>Kalendarium Jbzd – JebzWiki – Wikiful</title>
+<meta name="description" content="Daty podane kursywą są niepewne i wymagają weryfikacji">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wikiful">
+<meta property="og:dateCreated" content="2022-05-22T18:42:58Z">
+<meta property="og:dateModified" content="2025-07-18T14:29:48Z">
+<meta property="og:ttl" content="345600">
+<meta property="og:url" content="https://www.wikiful.com/@Kurwaras/jebzwiki/jbzd/historia-jbzd/kalendarium-jbzd">
+<meta property="og:title" content="Kalendarium Jbzd – JebzWiki – Wikiful">
+<meta property="og:description" content="Daty podane kursywą są niepewne i wymagają weryfikacji">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="Wikiful">
+<meta name="twitter:title" content="Kalendarium Jbzd – JebzWiki – Wikiful">
+<meta name="twitter:description" content="Daty podane kursywą są niepewne i wymagają weryfikacji">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- / Setup our <base> tag. This makes our relative wiki page links work correctly. -->
+<!-- / See https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base for details. -->
+<base href='https://www.wikiful.com/@Kurwaras/jebzwiki/'>
+<link rel="stylesheet" media="all" href="https://static.wikiful.com/assets/wiki-b1f195c510df7a022a0095f75bcdfc86de4a77261344e15a3d84591862c380e3.css" />
+<script src="https://static.wikiful.com/assets/wiki-455fd96d1f3b2e80760d9a70210cb90f26a6e510b866d3bf4c1fb2019fd9b6b2.js"></script>
+<script async data-ad-client='ca-pub-9945364869813639' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js'></script>
+<script>
+  
+  window.wikiHash = {"wikiSlug":"/@Kurwaras/jebzwiki","title":"JebzWiki","id":"d6b1b9af-02dd-4bac-a307-2fc8dee3a269","isPublic":true,"isOrgWiki":false,"organization":null,"createdAt":1653242342,"pathname":"/@Kurwaras/jebzwiki","childPages":[{"id":"30042d62-0e89-4fd1-a1ba-bfe4849cbba6","title":"Jbzd","pathname":"/@Kurwaras/jebzwiki/jbzd","childPages":[{"id":"081b8c45-69d9-4621-babb-8feb9254411a","title":"Historia Jbzd ","pathname":"/@Kurwaras/jebzwiki/jbzd/historia-jbzd--2","childPages":[{"id":"da817cd2-4670-47c3-a58a-e80e9f987561","title":"Epoki","pathname":"/@Kurwaras/jebzwiki/jbzd/historia-jbzd/epoki","childPages":[]},{"id":"2f1c1210-7f65-4080-9ef0-07c9af94e23d","title":"Wojny ","pathname":"/@Kurwaras/jebzwiki/jbzd/historia-jbzd/wojny","childPages":[{"id":"96385d8b-84cf-46cb-be13-e2f12e5584d5","title":"II Wojna Stulejna","pathname":"/@Kurwaras/jebzwiki/jbzd/historia-jbzd/wojny/ii-wojna-stulejna","childPages":[]}]},{"id":"f4c3821e-54f3-48ad-a0e3-593a8aa39fa3","title":"Kalendarium Jbzd","pathname":"/@Kurwaras/jebzwiki/jbzd/historia-jbzd/kalendarium-jbzd","childPages":[{"id":"4adf2518-9a0a-4e52-ab5f-ffb22191ef37","title":"Aktualizacja 17 czerwca 2023","pathname":"/@Kurwaras/jebzwiki/jbzd/historia-jbzd/kalendarium-jbzd/aktualizacja-17-czerwca-2023","childPages":[]}],"expanded":true}],"expanded":true},{"id":"aaf36f11-8055-4118-863f-e81216dce91f","title":"Społeczność i kultura Jbzd","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd","childPages":[{"id":"aef920e9-cf4b-4b66-b2c3-213ea0a3a33e","title":"Dzidowcy ","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy","childPages":[{"id":"e830ccb2-4ec0-44c7-aa48-c1b7432cfde5","title":"Lista dzidowców (niekompletna)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna","childPages":[{"id":"6f8c49e9-a4e7-49c1-8f54-c1d60ecbc469","title":"AdonisPL (stronniczy/niekompletny)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/adonispl-stronniczy-niekompletny","childPages":[]},{"id":"85590784-f5ab-4166-b966-28accb49b582","title":"Alban12 (stronniczy/niekompletny[1])","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/alban12-stronniczy-niekompletny-1","childPages":[]},{"id":"14041728-624d-4126-ad05-a076e90240a4","title":"Alcik ","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/alcik","childPages":[]},{"id":"d55fbba7-67aa-42f8-9589-6950474deeaf","title":"Ar0n (niekompletny/stronniczy)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/ar0n-niekompletny-stronniczy","childPages":[]},{"id":"460cd3c5-3864-4cf8-90c9-3e90bf1ae3c1","title":"Aries2much (stronniczy/niekompletny)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/aries2much-stronniczy-niekompletny","childPages":[]},{"id":"55a31ba9-20b2-43db-b629-6d1994e328b1","title":"BialyMis (nieaktualny, brak obrazków)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/bialymis-nieaktualny-brak-obrazkow","childPages":[]},{"id":"3db10b45-75b4-443c-8bbb-1d6a58a32906","title":"Bob Ross","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/bob-ross","childPages":[]},{"id":"7bbe46cd-d6b6-4b90-aabb-cba0912645b4","title":"brzyda (zarys)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/brzyda-zarys","childPages":[]},{"id":"44efe6d8-29d8-4de1-aafb-b065d987c9a0","title":"DuderSan (niekompletny)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/dudersan-niekompletny","childPages":[]},{"id":"2343693a-b3a8-4f2b-a2be-ecd215b178c8","title":"DzikiBogus","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/dzikibogus","childPages":[]},{"id":"016dee2d-830a-438c-95d9-e55287e6aa1b","title":"Gierekt ","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/gierekt","childPages":[]},{"id":"47f09002-5a41-4fcf-836b-a07f5ec3beb2","title":"HenioZasraniec (niekompletny)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/heniozasraniec-niekompletny","childPages":[]},{"id":"bb35ba04-9c88-4346-a72a-0243f0a0faf7","title":"Huauei123","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/huauei123","childPages":[]},{"id":"cc225678-df04-4d5f-9e04-2a95ed0e45b8","title":"Hubert Żabicki","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/hubert-zabicki","childPages":[]},{"id":"847d97e7-e029-4107-b138-aecbebcd3cfb","title":"Luk-928","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/luk-928","childPages":[]},{"id":"8114e1e8-886b-49cf-8fff-f2558c7edcfa","title":"zy-leta (niekompletny)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/zy-leta-niekompletny","childPages":[]}]},{"id":"145b6d1f-aa58-4da2-9ef3-60c8d76abdaf","title":"Abdul Wisimulacha (niekompletny/stronniczy)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/abdul-wisimulacha-niekompletny-stronniczy","childPages":[]},{"id":"4377c615-a418-4ae0-8711-914f9014561e","title":"AdamW (niekompletny, niezweryfikowane informacje)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/adamw-niekompletny-niezweryfikowane-informacje","childPages":[]},{"id":"cb965958-9ecf-48f0-abd0-8937cc64748b","title":"BloedeNordling (niekompletny)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/bloedenordling-niekompletny","childPages":[]},{"id":"4daba1a2-a057-437d-95b7-2f798fa6492f","title":"Chleb1234 (oryginalny)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/chleb1234-oryginalny","childPages":[]},{"id":"80d3999d-5337-4546-9ac9-d411fc573e04","title":"dfens","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/dfens","childPages":[]},{"id":"9559073a-0276-4bd8-af84-275bca2e5428","title":"edziorychu12 (niekompletny/nieaktualny)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/edziorychu12-niekompletny-nieaktualny","childPages":[]},{"id":"567b4e91-f4a9-4bd0-9772-08520dd8461c","title":"PanPanTadeusz","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/panpantadeusz","childPages":[]},{"id":"b7b4cc52-070c-4d8a-a594-3a2350f44f61","title":"Rajszamderrs","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/rajszamderrs","childPages":[]},{"id":"865c961d-58ea-48c4-9f97-c98120e95da2","title":"Szary186 ","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/szary186","childPages":[]},{"id":"2fc90f05-3ae3-4e5a-a3d1-6d760c442db8","title":"terry1996","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/terry1996","childPages":[]},{"id":"fe98fcdd-157f-4789-af69-3aa4280fe587","title":"tomasz-chadan (niekompletny)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/tomasz-chadan-niekompletny","childPages":[]}]},{"id":"17904a07-46fb-4f01-8adb-aeecf0256375","title":"Mikroblogowe","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe","childPages":[{"id":"e4730908-fbc4-4b6f-af08-5272bfa1a847","title":"Biedna Pierdolona Piechota","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/biedna-pierdolona-piechota","childPages":[]},{"id":"1fa5dbae-d2c3-4426-9f08-4bb9f9ef1efc","title":"JebzMMA","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/jebzmma","childPages":[]},{"id":"0e1bf553-6f3e-4140-9ab2-5fab77fb20af","title":"JebzMMA2","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/jebzmma2","childPages":[]},{"id":"b2966313-eacb-4367-bc51-02209a3f3e82","title":"Pożoga Rzymu (roleplay)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay","childPages":[{"id":"11afe773-acc9-45f0-88b9-c6c0e20d648b","title":"Armia Nieumarłych ","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay/armia-nieumarlych","childPages":[]},{"id":"9b3e70a7-7769-4c6a-ae3b-33979523a846","title":"Imperium Nieumarłych","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay/imperium-nieumarlych","childPages":[]},{"id":"39164f47-bd01-4bf8-ad9b-ba7a614d2199","title":"Krąg Actimela","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay/krag-actimela","childPages":[]},{"id":"992f59b8-897c-492d-b7aa-47a97e862e05","title":"Legion XXIII \"Stuleja\"","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay/legion-xxiii-stuleja","childPages":[]},{"id":"b031f3fb-4b8d-4624-a484-ce83b1c057cd","title":"Pożoga Rzymu (organizacja)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay/pozoga-rzymu-organizacja","childPages":[]}]},{"id":"5c866223-6cab-4fb8-a8dd-1c905d2ae47d","title":"Szwadron Spierdolenia","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/szwadron-spierdolenia","childPages":[]},{"id":"7adb175b-9d55-4975-a2f2-f4cb35c2cba6","title":"Turniej Trójpopierdolony","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/turniej-trojpopierdolony","childPages":[]},{"id":"7b3ba6fd-39a1-41a8-953c-0e4f6114a341","title":"Wojna Partyjna (roleplay)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/wojna-partyjna-roleplay","childPages":[{"id":"525b6996-160c-4b04-ac95-983ee86eb42e","title":"KGD","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/wojna-partyjna-roleplay/kgd","childPages":[]},{"id":"2e69898e-96a5-4e6f-a199-475549237f48","title":"NMPPD","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/wojna-partyjna-roleplay/nmppd","childPages":[]}]},{"id":"7aad6bcf-4c96-450a-9055-ad17acc1edfc","title":"Zakon Rycerzy Wielkiego Przegrywu","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/zakon-rycerzy-wielkiego-przegrywu","childPages":[]}]},{"id":"38fb98e6-22d0-4334-9726-b17df8b55664","title":"Dzidowe samobójstwo","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowe-samobojstwo","childPages":[]},{"id":"03570aeb-e6ff-4dc4-858e-806508564322","title":"Historia Pewnej Dzidy ","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/historia-pewnej-dzidy","childPages":[]},{"id":"f4dba185-d97c-4a79-9cf1-cfb7384c32e0","title":"Kolor nicku (niekompletny)","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/kolor-nicku-niekompletny","childPages":[]},{"id":"d07ddaf8-5789-4fd4-a10c-d5f079129659","title":"Księga Dzidy ","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/ksiega-dzidy","childPages":[]},{"id":"71dedf6e-f569-4c81-955c-a38c01ceb673","title":"Owczy pęd","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/owczy-ped","childPages":[]},{"id":"1c00f1f7-7c53-411d-90d0-4c3aabcd957c","title":"Słownik gwary dzidowej ","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/slownik-gwary-dzidowej","childPages":[]},{"id":"b825a9da-682d-4b2b-9642-532ada484cdc","title":"Święta Lista Spierdolenia","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/swieta-lista-spierdolenia","childPages":[]},{"id":"1ed5afde-be55-4942-938e-0ebf3ffdbaa0","title":"Wypierdalajoswastyka","pathname":"/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/wypierdalajoswastyka","childPages":[]}]},{"id":"a62c650c-64d6-4b94-9b60-5926f59af6c3","title":"Struktura jbzd oraz jej działy i panele","pathname":"/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele","childPages":[{"id":"64b3fa9b-23d3-425f-8e8b-7443df92005f","title":"Strona główna Jbzd (zalążek)","pathname":"/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/strona-glowna-jbzd-zalazek","childPages":[]},{"id":"5bd39087-dc48-4427-b0ca-e0b0fca01efb","title":"Poczekalnia/Oczekujące","pathname":"/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/poczekalnia-oczekujace","childPages":[]},{"id":"9a79d9bb-2811-455b-8ac3-48ece92d8c18","title":"Działy SFW ","pathname":"/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/dzialy-sfw","childPages":[]},{"id":"e8a03864-fd81-45c1-984c-ad2beaf539d4","title":"Działy NSFW","pathname":"/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/dzialy-nsfw","childPages":[{"id":"6e0f2b1e-b78b-43aa-898f-80b3e2ed1ae0","title":"Hard (wersja z starej wiki [1])","pathname":"/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/dzialy-nsfw/hard-wersja-z-starej-wiki-1","childPages":[]},{"id":"a85a22da-e094-41b1-a68d-880ead04c418","title":"Anime","pathname":"/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/dzialy-nsfw/anime","childPages":[]},{"id":"bb903454-b700-4cc4-b93c-746db51e1b58","title":"Cosplay ","pathname":"/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/dzialy-nsfw/cosplay","childPages":[]}]},{"id":"8f1a9b6c-6b55-4a92-ad28-bc9a364f7b15","title":"Mikroblog (niekompletny)","pathname":"/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/mikroblog-niekompletny","childPages":[]},{"id":"20546795-0a7b-4b46-8972-dc2440508697","title":"Ranking użytkowników","pathname":"/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/ranking-uzytkownikow","childPages":[]}]},{"id":"b87b11a5-6854-4bd2-8ccb-8eda38012595","title":"Interfejs i elementy strony","pathname":"/@Kurwaras/jebzwiki/jbzd/interfejs-i-elementy-strony","childPages":[{"id":"de56b1f8-303a-4fab-9379-979fab62041e","title":"Interfejs strony","pathname":"/@Kurwaras/jebzwiki/jbzd/interfejs-i-elementy-strony/interfejs-strony","childPages":[]},{"id":"64fd80fd-9718-47dd-9c08-be32232e4382","title":"Interfejs strony do 17 czerwca 2023","pathname":"/@Kurwaras/jebzwiki/jbzd/interfejs-i-elementy-strony/interfejs-strony-do-17-czerwca-2023","childPages":[]},{"id":"7eeab367-e736-473e-a517-cd9f86483c53","title":"Interfejs posta i komentarzy","pathname":"/@Kurwaras/jebzwiki/jbzd/interfejs-i-elementy-strony/interfejs-posta-i-komentarzy","childPages":[]}]},{"id":"110d9498-0b95-4445-a973-e3e6e0d7b176","title":"Administracja Jbzd ","pathname":"/@Kurwaras/jebzwiki/jbzd/administracja-jbzd","childPages":[{"id":"ee30c471-fd6d-4ea0-9795-7eba776f65d9","title":"dexxxterek","pathname":"/@Kurwaras/jebzwiki/jbzd/administracja-jbzd/dexxxterek","childPages":[]},{"id":"18b7c355-dfa8-416a-b202-b0acc3808488","title":"Noszekresze (były admin)","pathname":"/@Kurwaras/jebzwiki/jbzd/administracja-jbzd/noszekresze-byly-admin","childPages":[]},{"id":"7196698e-b4e4-4bcd-bb47-ce6d1bd2b30e","title":"ruszofy_konik (niekompletny)","pathname":"/@Kurwaras/jebzwiki/jbzd/administracja-jbzd/ruszofy_konik-niekompletny","childPages":[]}]},{"id":"15749287-c7e1-4918-aac3-c9f81348ba41","title":"Discordy Jbzd ","pathname":"/@Kurwaras/jebzwiki/jbzd/discordy-jbzd","childPages":[{"id":"ded4193c-53dd-4b17-9c44-0f626122f2a8","title":"Mikrodzida (niekompletny/nieaktualny)","pathname":"/@Kurwaras/jebzwiki/jbzd/discordy-jbzd/mikrodzida-niekompletny-nieaktualny","childPages":[]}]},{"id":"d39cadc3-5d4a-433b-9d31-c0a1fcef9888","title":"Strony powiązane z Jbzd","pathname":"/@Kurwaras/jebzwiki/jbzd/strony-powiazane-z-jbzd","childPages":[]},{"id":"95676970-499f-4849-aae7-fb647f8d4f52","title":"Jebźródła ","pathname":"/@Kurwaras/jebzwiki/jbzd/jebzrodla","childPages":[{"id":"406ba345-397d-4710-a724-fc68d95adde8","title":"Jebźródła I - \"Rozprawa o biuście\"","pathname":"/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-i-rozprawa-o-biuscie","childPages":[]},{"id":"a2021d9d-8949-4a99-b0d2-ce97bb7c6457","title":"Jebźródła II - Chleb o sobie","pathname":"/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-chleb-o-sobie","childPages":[]},{"id":"63d2903e-6896-4128-bb4d-eed3aaa51477","title":"Jebźródła II - \"Geneza protokołu WY-PIER\" (cz. 1 i 2)","pathname":"/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-geneza-protokolu-wy-pier-cz-1-i-2","childPages":[]},{"id":"c06505ff-cf6d-4924-b50e-2502046cbfd2","title":"Jebźródła II - \"Hymn Dzidowców\"","pathname":"/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-hymn-dzidowcow","childPages":[]},{"id":"14617f42-aa35-4b2a-a710-fdc8018d6aa3","title":"Jebźródła II - Mityczne byty - dziewczyny","pathname":"/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-mityczne-byty-dziewczyny","childPages":[]},{"id":"c7989d89-54aa-4c1f-8e00-19558fd8c3ee","title":"Jebźródła II - Przepowiednia Rajszamderrs","pathname":"/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-przepowiednia-rajszamderrs","childPages":[]},{"id":"c3473813-189b-4eb2-9351-a7110091f264","title":"Jebźródła II - \"Reduta Patrysa\"","pathname":"/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-reduta-patrysa","childPages":[]},{"id":"0680bdc2-585e-49f4-baf8-c4b4ae0b4e04","title":"Jebźródła II - Roksany (400 zł za zwalenie konia)","pathname":"/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-roksany-400-zl-za-zwalenie-konia","childPages":[]},{"id":"a311fdec-7b9a-48b2-8fd0-ac706bd7c0b1","title":"Jebźródła II - \"Spierdon z JBZD\"","pathname":"/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-spierdon-z-jbzd","childPages":[]},{"id":"ac3ddd8e-5f3a-4c9e-b7ba-62bb9ad08e54","title":"Jebźródła II - Szanta o dzidce","pathname":"/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-szanta-o-dzidce","childPages":[]}]}],"expanded":true},{"id":"c8df0931-84ac-45c9-bbb9-817648922a7d","title":"FAQ - jbzd ","pathname":"/@Kurwaras/jebzwiki/faq-jbzd","childPages":[]},{"id":"ae10147c-0c07-419e-bb37-139d4808aba7","title":"FAQ - JebzWiki ","pathname":"/@Kurwaras/jebzwiki/faq-jebzwiki","childPages":[]}]};
+</script>
+
+</head>
+<body :class='{editing: editing, guest: !user.email}' class='preload navbar-fixed' v-cloak>
+<div class='site-container'>
+<nav class='navbar fixed border'>
+<div class='container'>
+<a alt='Wikiful.com' class='navbar-brand' href='https://www.wikiful.com/' title='Wikiful.com'></a>
+<div class='dropdown username' v-cloak v-dropdown.flash v-if='user.email'>
+<div class='dropdown-toggle'>
+{{ user.username || user.name }}
+<i class='icon icon-caret-down'></i>
+</div>
+<ul class='dropdown-menu'>
+
+<template v-if='is_org_user'>
+<li>
+<a href='/settings/wikis'>Wiki Dashboard</a>
+</li>
+<li>
+<a href='/settings/team'>Manage Team</a>
+</li>
+<li>
+<a href='/settings/billing'>Billing</a>
+</li>
+</template>
+<template v-if='!is_org_user'>
+<li>
+<a href='/settings/wikis'>Wiki Dashboard</a>
+</li>
+</template>
+<li>
+<a href='/settings/account'>My Account</a>
+</li>
+<li class='dropdown-divider' role='separator'></li>
+<li>
+<a @click='logout()' id='logout'>Log Out</a>
+</li>
+
+</ul>
+</div>
+<ul class='navbar-links pull-right'>
+<li class='spaced'>
+<search></search>
+</li>
+<li class='spaced'>
+<button @click='showShareModal()' class='primary inverse square rounded no-hover' id='share' v-tooltip='shareTooltip'>
+<i class='icon icon-share'></i>
+</button>
+</li>
+<li class='spaced lock'>
+<button :class='{&#39;no-cursor&#39;: permission != &#39;own&#39; || wiki.organization}' @click='showPrivacyModal' class='inverse square rounded no-hover' id='privacy-button' v-tooltip='lockTooltip'>
+<i :class='[wiki.isPublic ? &#39;icon-unlock-alt&#39; : &#39;icon-lock&#39;]' class='icon icon-unlock-alt'></i>
+</button>
+</li>
+
+<template v-if='!user.email'>
+<li class='sign-in'>
+<a class='button secondary rounded fixed-md' href='/sign-in'>Sign in</a>
+</li>
+<li class='sign-up'>
+<a class='button primary inverse rounded shadowed fixed-md' href='/sign-up'>Sign up</a>
+</li>
+</template>
+</ul>
+</div>
+</nav>
+<div :class='{expanded: showVburger}' class='vburger dropdown fix-scroll' v-el:vburger v-if='user.email'>
+<div @click='toggleVburger(!showVburger)' class='vburger-toggle'>
+<span class='icon-bar top-bar'></span>
+<span class='icon-bar middle-bar'></span>
+<span class='icon-bar bottom-bar'></span>
+</div>
+<ul class='vburger-dropdown fix-scroller' v-cloak v-show='showVburger'>
+
+<template v-if='user.email'>
+<template v-if='is_org_user'>
+<li>
+<a href='/settings/wikis'>Wiki Dashboard</a>
+</li>
+<li>
+<a href='/settings/team'>Manage Team</a>
+</li>
+<li>
+<a href='/settings/billing'>Billing</a>
+</li>
+</template>
+<template v-if='!is_org_user'>
+<li>
+<a href='/settings/wikis'>Wiki Dashboard</a>
+</li>
+</template>
+<li>
+<a href='/settings/account'>My Account</a>
+</li>
+<li class='dropdown-divider' role='separator'></li>
+<li>
+<a @click='logout()' id='logout'>Log Out</a>
+</li>
+
+</template>
+</ul>
+</div>
+
+<div class='main-content'>
+<div :class='{expanded: showNavSlideOut}' class='nav-container fix-scroll'>
+<div class='slide-out' id='js_slide_out'>
+<i class='icon icon-caret-right'></i>
+<i class='icon icon-caret-left'></i>
+</div>
+<div class='side-nav-wrapper fix-scroller' id='js_side_nav_wrapper'>
+<div class='side-nav'>
+<button :class='{focus: modal == &#39;reorder-pages-modal&#39;}' @click='showReorderPagesModal()' class='save reorder' v-show='wiki.childPages &amp;&amp; wiki.childPages.length &gt;= 2' v-tooltip:right.literal='Reorder Pages'>
+<i class='icon icon-exchange icon-rotate-90'></i>
+</button>
+<div class='title' v-if='loaded'>
+<div class='is-active page-title' v-show='currentPage == wiki'>{{ wiki.title }}</div>
+<a :href='wiki.pathname' class='page-title' v-show='currentPage != wiki'>{{ wiki.title }}</a>
+</div>
+<page-links :page='wiki' v-if='loaded'></page-links>
+<div class='title' v-if='!loaded'>
+<a class='page-title' href='/@Kurwaras/jebzwiki'>JebzWiki</a>
+</div>
+<ol v-if='!loaded'>
+<li class='is-expanded'>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd'>Jbzd</a>
+<ol v-if='!loaded'>
+<li class='is-expanded'>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/historia-jbzd--2'>Historia Jbzd </a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/historia-jbzd/epoki'>Epoki</a>
+</li>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/historia-jbzd/wojny'>Wojny </a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/historia-jbzd/wojny/ii-wojna-stulejna'>II Wojna Stulejna</a>
+</li>
+</ol>
+
+</li>
+<li class='is-expanded'>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<div class='is-active page-title clickable'>Kalendarium Jbzd</div>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/historia-jbzd/kalendarium-jbzd/aktualizacja-17-czerwca-2023'>Aktualizacja 17 czerwca 2023</a>
+</li>
+</ol>
+
+</li>
+</ol>
+
+</li>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd'>Społeczność i kultura Jbzd</a>
+<ol v-if='!loaded'>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy'>Dzidowcy </a>
+<ol v-if='!loaded'>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna'>Lista dzidowców (niekompletna)</a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/adonispl-stronniczy-niekompletny'>AdonisPL (stronniczy/niekompletny)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/alban12-stronniczy-niekompletny-1'>Alban12 (stronniczy/niekompletny[1])</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/alcik'>Alcik </a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/ar0n-niekompletny-stronniczy'>Ar0n (niekompletny/stronniczy)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/aries2much-stronniczy-niekompletny'>Aries2much (stronniczy/niekompletny)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/bialymis-nieaktualny-brak-obrazkow'>BialyMis (nieaktualny, brak obrazków)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/bob-ross'>Bob Ross</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/brzyda-zarys'>brzyda (zarys)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/dudersan-niekompletny'>DuderSan (niekompletny)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/dzikibogus'>DzikiBogus</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/gierekt'>Gierekt </a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/heniozasraniec-niekompletny'>HenioZasraniec (niekompletny)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/huauei123'>Huauei123</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/hubert-zabicki'>Hubert Żabicki</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/luk-928'>Luk-928</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/lista-dzidowcow-niekompletna/zy-leta-niekompletny'>zy-leta (niekompletny)</a>
+</li>
+</ol>
+
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/abdul-wisimulacha-niekompletny-stronniczy'>Abdul Wisimulacha (niekompletny/stronniczy)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/adamw-niekompletny-niezweryfikowane-informacje'>AdamW (niekompletny, niezweryfikowane informacje)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/bloedenordling-niekompletny'>BloedeNordling (niekompletny)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/chleb1234-oryginalny'>Chleb1234 (oryginalny)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/dfens'>dfens</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/edziorychu12-niekompletny-nieaktualny'>edziorychu12 (niekompletny/nieaktualny)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/panpantadeusz'>PanPanTadeusz</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/rajszamderrs'>Rajszamderrs</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/szary186'>Szary186 </a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/terry1996'>terry1996</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowcy/tomasz-chadan-niekompletny'>tomasz-chadan (niekompletny)</a>
+</li>
+</ol>
+
+</li>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe'>Mikroblogowe</a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/biedna-pierdolona-piechota'>Biedna Pierdolona Piechota</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/jebzmma'>JebzMMA</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/jebzmma2'>JebzMMA2</a>
+</li>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay'>Pożoga Rzymu (roleplay)</a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay/armia-nieumarlych'>Armia Nieumarłych </a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay/imperium-nieumarlych'>Imperium Nieumarłych</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay/krag-actimela'>Krąg Actimela</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay/legion-xxiii-stuleja'>Legion XXIII &quot;Stuleja&quot;</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/pozoga-rzymu-roleplay/pozoga-rzymu-organizacja'>Pożoga Rzymu (organizacja)</a>
+</li>
+</ol>
+
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/szwadron-spierdolenia'>Szwadron Spierdolenia</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/turniej-trojpopierdolony'>Turniej Trójpopierdolony</a>
+</li>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/wojna-partyjna-roleplay'>Wojna Partyjna (roleplay)</a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/wojna-partyjna-roleplay/kgd'>KGD</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/wojna-partyjna-roleplay/nmppd'>NMPPD</a>
+</li>
+</ol>
+
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/mikroblogowe/zakon-rycerzy-wielkiego-przegrywu'>Zakon Rycerzy Wielkiego Przegrywu</a>
+</li>
+</ol>
+
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/dzidowe-samobojstwo'>Dzidowe samobójstwo</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/historia-pewnej-dzidy'>Historia Pewnej Dzidy </a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/kolor-nicku-niekompletny'>Kolor nicku (niekompletny)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/ksiega-dzidy'>Księga Dzidy </a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/owczy-ped'>Owczy pęd</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/slownik-gwary-dzidowej'>Słownik gwary dzidowej </a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/swieta-lista-spierdolenia'>Święta Lista Spierdolenia</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/spolecznosc-i-kultura-jbzd/wypierdalajoswastyka'>Wypierdalajoswastyka</a>
+</li>
+</ol>
+
+</li>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele'>Struktura jbzd oraz jej działy i panele</a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/strona-glowna-jbzd-zalazek'>Strona główna Jbzd (zalążek)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/poczekalnia-oczekujace'>Poczekalnia/Oczekujące</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/dzialy-sfw'>Działy SFW </a>
+</li>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/dzialy-nsfw'>Działy NSFW</a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/dzialy-nsfw/hard-wersja-z-starej-wiki-1'>Hard (wersja z starej wiki [1])</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/dzialy-nsfw/anime'>Anime</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/dzialy-nsfw/cosplay'>Cosplay </a>
+</li>
+</ol>
+
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/mikroblog-niekompletny'>Mikroblog (niekompletny)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/ranking-uzytkownikow'>Ranking użytkowników</a>
+</li>
+</ol>
+
+</li>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/interfejs-i-elementy-strony'>Interfejs i elementy strony</a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/interfejs-i-elementy-strony/interfejs-strony'>Interfejs strony</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/interfejs-i-elementy-strony/interfejs-strony-do-17-czerwca-2023'>Interfejs strony do 17 czerwca 2023</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/interfejs-i-elementy-strony/interfejs-posta-i-komentarzy'>Interfejs posta i komentarzy</a>
+</li>
+</ol>
+
+</li>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/administracja-jbzd'>Administracja Jbzd </a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/administracja-jbzd/dexxxterek'>dexxxterek</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/administracja-jbzd/noszekresze-byly-admin'>Noszekresze (były admin)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/administracja-jbzd/ruszofy_konik-niekompletny'>ruszofy_konik (niekompletny)</a>
+</li>
+</ol>
+
+</li>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/discordy-jbzd'>Discordy Jbzd </a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/discordy-jbzd/mikrodzida-niekompletny-nieaktualny'>Mikrodzida (niekompletny/nieaktualny)</a>
+</li>
+</ol>
+
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/strony-powiazane-z-jbzd'>Strony powiązane z Jbzd</a>
+</li>
+<li>
+<div class='expand'>
+<div class='icon icon-caret-right'></div>
+<div class='icon icon-caret-down'></div>
+</div>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/jebzrodla'>Jebźródła </a>
+<ol v-if='!loaded'>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-i-rozprawa-o-biuscie'>Jebźródła I - &quot;Rozprawa o biuście&quot;</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-chleb-o-sobie'>Jebźródła II - Chleb o sobie</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-geneza-protokolu-wy-pier-cz-1-i-2'>Jebźródła II - &quot;Geneza protokołu WY-PIER&quot; (cz. 1 i 2)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-hymn-dzidowcow'>Jebźródła II - &quot;Hymn Dzidowców&quot;</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-mityczne-byty-dziewczyny'>Jebźródła II - Mityczne byty - dziewczyny</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-przepowiednia-rajszamderrs'>Jebźródła II - Przepowiednia Rajszamderrs</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-reduta-patrysa'>Jebźródła II - &quot;Reduta Patrysa&quot;</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-roksany-400-zl-za-zwalenie-konia'>Jebźródła II - Roksany (400 zł za zwalenie konia)</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-spierdon-z-jbzd'>Jebźródła II - &quot;Spierdon z JBZD&quot;</a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/jbzd/jebzrodla/jebzrodla-ii-szanta-o-dzidce'>Jebźródła II - Szanta o dzidce</a>
+</li>
+</ol>
+
+</li>
+</ol>
+
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/faq-jbzd'>FAQ - jbzd </a>
+</li>
+<li>
+<a class='page-title' href='/@Kurwaras/jebzwiki/faq-jebzwiki'>FAQ - JebzWiki </a>
+</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class='wiki-container'>
+<div class='wiki'>
+<div class='wiki-titles'>
+<span class='title page-title' v-if='!loaded'>Kalendarium Jbzd</span>
+<span class='title page-title' v-if='loaded'>{{ currentPage ? currentPage.title : "" }}</span>
+<textarea @blur='editingTitle = false' @drop.stop.prevent @focus='editingTitle = true' @keydown.enter.prevent @keyup='removeNewLines' type='text' v-model='newTitle'></textarea>
+</div>
+<div class='wiki-content-wrapper' id='js_wiki_content_wrapper'>
+<div class='wiki-content' id='js_clean_wiki_content' v-if='!loaded'><p><em>Daty podane kursywą są niepewne i wymagają weryfikacji</em></p><p></p><p></p><h1>2009</h1><p>Jest to rok, który niektórzy starsi użytkownicy podają jako początek dzidy, brak jednak na to empirycznych dowodów.</p><p></p><p></p><h1>2010</h1><p>Rok również podawany czasem jako pierwszy w historii jebzdzidy. Część najstarszych użytkowników przekazuje o przerzuceniu jebzdzidy na inne serwery/resecie serwerów, w wyniku czego cała zawartość strony przepadła. Domniemywa się, że jeśli miało to miejsce, to przed październikiem 2011, czyli “oficjalnie” uznanym początkiem dzidy.</p><p></p><p>15 grudnia - data podana w <span class="underline">Regulaminie</span> jbzd, jako dzień w którym wchodzi on w życie</p><p></p><p></p><h1>2011</h1><p>2 lub 3 marca - powstanie <span class="underline">Cube Investments</span> (wpisanie Cube do KRS, obie daty występują w różnych wpisach)</p><p></p><p>17 października - domniemana data <strong>powstania </strong><a href="jbzd"><strong>jbzd</strong></a>, powstanie najstarszego konta na JBZD - <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/dzidowcy/dfens">dfens</a>, domniemanie konto <span class="underline">Dymitra Głuszczenki</span>. Dzień opublikowania najstarszych dostępnych postów, m. in. wrzuty z id numer 2: “Każdy z nas zna osobę której śmiech rozpierdala wszystkich wokół”. Jednocześnie w tym samym czasie odbyła się reklama jbzd na kwejku.</p><p></p><p>19 października - wg <span class="underline">Hatoga</span> data założenia jbzd przez Dymitra Głuszczenkę, początek tzw. Ery Chaosu (więcej o <a href="jbzd/historia-jbzd-zalazek/epoki">erach</a>)</p><p></p><p>październik - czas publikacji najstarszej wciąż istniejącej dzidy (“Prawda o twoich znajomych” oraz najstarszej z poczekalni  (“Dziadek samo zło”) czy wcześniejszej najstarszej na oczekujących (“Podnieceni fotografowie”).</p><p></p><p>W tym roku miało także dojść do usunięcia całości bądź części wcześniej opublikowanych postów, przez przeniesienie serwerów Jbzd Cube.</p><p></p><p></p><h1>2012</h1><p>W roku tym memy były niemal wyłącznie wrzucane przez konta adminów i konta podejrzewane o bycie multikontami administracji.</p><p>Zauważalny jest także znaczący spadek ilości plusów na stronie głównej, z kilku tys. na początku roku do kilkudziesięciu - kilkunastu pod koniec roku. </p><p></p><p></p><h1>2013</h1><p><em>połowa</em> - początek tzw. Okresu przedimplozyjnego</p><p></p><p>kwiecień - uaktywnia się konto admina <span class="underline">jezus-malina</span>, początkowo wrzuca galerie zdjęć</p><p></p><p><em>około października/listopada</em> - zanikają multikonta adminów podejrzewane o fałszywe tworzenie ruchu we wstawianiu postów</p><p></p><p></p><h1>2014</h1><p>czerwiec - (?powstanie działu nsfw) najstarsza wrzutka na <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/hard-wersja-z-starej-wiki-1">Hardzie</a> oraz <span class="underline">Witam</span> (ale kolejna na Witam już z sierpnia 2017 tak jak kolejne, tam też komentarze mówiące o odbudowie działu)</p><p></p><p>sierpień - najstarsze nagrania wyświetlające się na zakładce <span class="underline">Video</span> (przebudowanej do systemu filtracji treści w 2022)</p><p></p><p>listopad - konto admińskie <span class="underline">ruszofy_konik</span> uaktywnia się we wrzucaniu memów</p><p></p><p><em>końcówka</em> - początek Implozji Memów</p><p></p><p></p><h1>2015</h1><p>31 października - <span class="underline">Chleb</span> zakłada swoje pierwsze konto (chleb123)</p><p></p><p>W roku tym dalej zauważalna jest dominacja wrzut adminów, nawet na poczekalni.</p><p></p><p></p><h1>2016</h1><p>24 kwietnia - założenie konta przez <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/dzidowcy/tomasz-chadan-niekompletny-niepewne-informacje">Tomasza Chadana</a></p><p></p><p><em>jesień</em> - początek tzw. Ery Zbawcy (podobno już wcześniej Chadan działał przez Facebooka)</p><p></p><p>25 listopada - pierwsze zarejestrowany spam only18</p><p></p><p>W roku tym widoczny jest wzrost liczby plusów na głównej, z kilkudziesięciu - 100+ na początku roku, do stałych kilkuset pod koniec, wzrost w następnych paru latach jeszcze przyśpiesza trwając w wyraźnej formie do około 2020 roku.</p><p></p><p></p><h1>2017</h1><p>24 stycznia - <span class="underline">wprowadzenie dzidowej sekcji komentarzy</span> nie powiązanej z kontami z fb.  (także możliwość dodawania tekstu w dzidach)</p><p></p><p><em>Także styczeń -</em> <span class="underline">spam strony only18</span> na jbzd, prowokacja, 25 stycznia spam odwetowy z jbzdy wywołany celowo przez konta spamujące only18</p><p></p><p>luty - ponowna próba spamu, tym razem grey2017, zdaje się nieudana</p><p></p><p><em>wiosna</em> - wybuch ?jednodniowego <span class="underline">Buntu Stulejnego</span></p><p></p><p>kwiecień - narodziny legendy samobójstwa <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/dzidowcy/adamw-niekompletny-niezweryfikowane-informacje">AdamaW</a> (“(…)do zoba po drugiej stronie”)</p><p></p><p><em>maj</em> - wybuch <span class="underline">I wojny stulejnej</span> i koniec Ery Zbawcy</p><p></p><p>29 maja - prawdopodobnie wprowadzenie cenzury wulgaryzmów w komentarzach (nawet w słowach jak dowc*p)</p><p></p><p><em>3 lipca </em>- wybuch <span class="underline">II wojny stulejnej</span></p><p></p><p><em>27 lipca</em> - dodanie czarnej listy (ale ograniczenie, do 10 użytkowników)</p><p></p><p>24 sierpnia - Zmiana nazwy dawnej sekcji <span class="underline">NSFW</span> na <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/hard-wersja-z-starej-wiki-1">Hard</a> i utworzenie działu <span class="underline">Witam</span>, na którym pojawiaja się druga dostępna i kolejne wrzuty. </p><blockquote><p> Pierwsza dzida na nowym NSFW gratulujemy! - KetSzot2</p></blockquote><p></p><p><em>sierpień</em> - koniec I wojny stulejnej</p><p></p><p>22 października - utworzenie konta przez <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/dzidowcy/abdul-wisimulacha-niekompletny-stronniczy">Abdula Wisimulachę</a></p><p></p><p><em>październik</em> - dodanie notyfikacji/powiadomień?</p><p></p><p><em>31 października</em> - koniec II wojny stulejnej, powstanie działów <span class="underline">Stopy</span>, <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/anime-w-trakcie-edycji">Anime</a> i <span class="underline">Inne nsfw</span> oraz kategorii <span class="underline">Czarny Humor</span>, <span class="underline">Polityka</span>, <span class="underline">Humor</span>, <span class="underline">Gry</span>, <span class="underline">Pasty</span>, <span class="underline">Dowcipy</span> i <span class="underline">Motoryzacja</span> i <span class="underline">Wiedza</span> </p><p></p><p><em>listopad/grudzień</em> - początek I etapu <span class="underline">Wojny o Loli</span> na dziale <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/anime-w-trakcie-edycji">Anime</a></p><p></p><p>17 grudnia - sabotaż discorda ATPDŻ przez Nerve’a</p><p></p><p></p><h1>2018</h1><p>styczeń - początek <span class="underline">Wojny o Zwierzęta</span> na dziale <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/hard-wersja-z-starej-wiki-1">Hard</a> (trwa przynajmniej do maja tego roku)</p><p>Także moment wybuchu spamów PupciaCiupcia oraz tzw. <span class="underline">cięciwą</span> tj. obrazkiem Ewoka ze Star Wars z podpisem “Ani kroku dalej kutafony, bo ta cięciwa zaśpiewa tango”.</p><p></p><p>4 luty - początek 1 edycji Best Waifu Tournament</p><p></p><p>9 lutego - robocze ?pierwsze opracowanie <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/historia-pewnej-dzidy">Historii Pewnej Dzidy</a> przez <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/dzidowcy/dzidowcy-kategoria-porzadkowa-tymczasowa/zy-leta-niekompletny">zy-letę</a></p><p></p><p>luty - najstarsza wrzuta na kategorii <span class="underline">Pytanie</span> i <span class="underline">Sport</span>. </p><p></p><p><em>luty/marzec</em> - koniec I etapu <span class="underline">Wojny o Loli</span>. Pierwszy banhammer z licznymi banami. Powstanie ~sojuszu między społecznościami działu <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/anime-w-trakcie-edycji">Anime</a> i furrasami ówcześnie na <span class="underline">Innych nsfw</span></p><blockquote><p>"tak pierdolnął, ze fala poszła na całą dzidę" - ...</p></blockquote><p></p><p></p><p><em>marzec-październik</em> - okres najintensywniejszych <span class="underline">walk o powstanie działu</span> <span class="underline">Furry</span> wg <span class="underline">Leprechauna</span></p><p></p><p><em>25 marca lub wcześniej</em> - utworzeniu dzidowego <span class="underline">Soundboardu</span></p><p></p><p>19 kwietnia - założenie <span class="underline">serwera furrasów Leprechauna</span></p><p></p><p>16 maj - finał 1 edycji Best Waifu Tournament na dziale Anime </p><p></p><p>lipiec - początek działalności <span class="underline">Ugabugamena</span></p><p></p><p>1 sierpnia - założenie <span class="underline">Mikrobloga</span></p><p></p><p>sierpień - <span class="underline">spam tapetami</span> telefonów na poczekalni</p><p></p><p><em>lipiec/sierpień</em> - początek II etapu <span class="underline">Wojny o Loli</span></p><p></p><p><em>10 września</em> - <span class="underline">Wielka Czystka</span> na dziale <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/anime-w-trakcie-edycji">Anime</a>, koniec II etapu Wojny o Loli</p><p></p><p>24 września - publikacja na Youtube materiału o niedoszłym dziale <span class="underline">Furry</span> - <a href="https://youtu.be/tvysyGJQnZA">https://youtu.be/tvysyGJQnZA</a></p><p></p><p>? - 15 października - wojna domowa na discordzie Leprechauna, która kończy się upadkiem serwera</p><p></p><p><em>16 październik</em> - powstanie działu Furry, po przejściu tam furrasów, <span class="underline">Inne nsfw</span> ma zostać zdominowane przez shemalowców</p><p></p><p>październik -  najstarsza wrzutka na dziale Furry (ogłaszająca nowy dział). Koniec <span class="underline">Wojny o dział Furry</span>.</p><p></p><p>grudzień - powstaje 1 sezon portretów <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/dzidowcy/dzidowcy-kategoria-porzadkowa-tymczasowa/bob-ross">Boba Rossa</a></p><p></p><p></p><h1>2019</h1><p>Zdaje się, że to w tym roku spopularyzowało się przesyłanie zdjęć z pozdrowieniami z pracy z karteczką z napisem Jbzd</p><p></p><p>grudzień 2018 - luty 2019 drugi rozkwit działalności <span class="underline">Ugabugamena</span></p><p></p><p>styczeń - próba <span class="underline">krucjaty propagowania nsfw</span>, aby przywrócić nsfw i czarno humorowe memy poza działy zamknięte. Widoczny jest pewien odzew, ale sprawa szybko ucichła, sam organizator twierdzi, że nie pamięta jak to się skończyło. Inicjatorem tym <span class="underline">KubZiggełeł</span>, użytkownik z małym kontem i dość kontrowersyjny, ponieważ dający sobie sam plusy, repostujący własne memy i ze sobą screeny.</p><p></p><p><em>6 marca</em> - początek <span class="underline">wojny z Pawełkiem od linków</span> (a przynajmniej na Mikroblogu)</p><p></p><p>kwiecień - wprowadzenie podglądu linków, zapewne skutek trwającej wojny z pawełkiem - <a href="https://jbzd.com.pl/obr/979398/czy-zauwazyliscie-ze-admin-zaczal-dzialac">https://jbzd.com.pl/obr/979398/czy-zauwazyliscie-ze-admin-zaczal-dzialac</a></p><p></p><p>lipiec - powstanie <a href="jbzd-zalazek-artykulu/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/cosplay">działu Cosplay</a> po petycji <span class="underline">Necro71</span>. Także najstarsze wrzuty na dziale <span class="underline">Hard Memy</span>.</p><p></p><p>28/29 lipca - nawoływanie do tzw. <span class="underline">rewolucji 4 sierpnia</span></p><p></p><p>sierpień - czas aktywności trolli z serii <span class="underline">gothictogówno</span></p><p>  </p><p>4 sierpnia - planowana data rewolucji/spamu, nie udało się przeprowadzić m.in. przez zbanowanie głównego organizatora (3 dni dla <span class="underline">Broma</span>)</p><p></p><p>21 sierpnia - powrót <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/dzidowcy/adamw-niekompletny-niezweryfikowane-informacje">AdamaW</a> na Jbzd, tzw. zmartwychwstanie</p><p></p><p><em>2 października</em> - wrzuty opublikowane przed tym dniem, które zawierają tylko znaki specjalne, wyświetlają błąd 404 (strona nie wychwytuje ich tytułu w odnośniku). Możliwe jest wyświetlenie ich podglądu tylko z profilu użytkownika i losowych.</p><p></p><p>październik -  najstarsze wrzutki na dziale <span class="underline">Własne F</span> (ówcześnie po prostu Własne).</p><p><span class="underline">HellsDragon</span> wrzuca na <span class="underline">Witam</span> swoje pierwsze zdjęcie Azjatki.</p><p></p><p>27 listopada - ostatnia zmiana domeny dzidy, ostateczne jej ustalenie na <a href="http://jbzd.com.pl">jbzd.com.pl</a> </p><p></p><p>29 listopada - publikacja <span class="underline">Hymnu Dzidowców</span> na Soundcloudzie</p><p></p><p><em>grudzień - styczeń 2020</em> - działalność "hakera"<span class="underline"> xXx_1337H4X0R_xXx</span> który dał 100k plusów na dzidę, a później jeszcze więcej (milion), tak że w 2021 - 2022 2 miliony 300 tys. ponad plusów na tej samej wrzutce.</p><p>Prawdopodobnie przez niego wkrótce do dania plusa pod dzidką było potrzebne konto, tak jak już wcześniej było potrzebne aby dać komuś innemu <span class="underline">plus na profil</span>.</p><p></p><p></p><h1>2020</h1><p></p><p><em>4 luty</em> - dodanie <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/kolor-nicku">kolorów nicków</a></p><p></p><p>luty - najstarsze wrzuty na kategorii <span class="underline">Hobby (publiczne)</span>, <span class="underline">Filmy</span> i <span class="underline">Ciekawostki</span> oraz na dziale <span class="underline">Metale</span></p><p></p><p>26 marca - początek stawiania infrastruktury <span class="underline">JebzWiki</span> (DzidaWiki) na Fandomie</p><p></p><p>30 marca - pierwszy post na JebzWiki</p><p></p><p>17 kwietnia - oficjalna prezentacja DzidaWiki na <span class="underline">Mikroblogu</span>, o godzinie 21:37</p><p></p><p><em>18 - 20 kwietnia</em> - zmieniony został ostatecznie <span class="underline">watermark dzidy</span> z jebzdzidy (druga wersja watermarka) na jbzd (jeśli wierzyć datom z instagrama jbzdy)</p><p></p><p><em>maj</em> - koniec <span class="underline">wojny</span> z <span class="underline">Pawełkiem od linków</span></p><p></p><p>23 czerwca - wprowadzono możliwość cofnięcia dania plusa/minusa pod ?komentarzem i ?dzidą </p><p>Wyniki 2 edycji Best Waifu Tournament na dziale Anime</p><p></p><p>1 lipca - “odejście” <span class="underline">smieciaspolecznego</span>, odchodzi również wkrótce <span class="underline">Alert_RCB</span> oraz <span class="underline">Kmdrsoban</span> (ci dwaj ostatni bezpośrednio w kolejnym poście</p><p></p><p>lipiec - najstarsze wrzuty na dziale Własne M</p><p></p><p>16 lipca - wprowadzenie <span class="underline">JBZD Premium</span></p><p></p><p>4 sierpnia - <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/dzidowcy/dzidowcy-kategoria-porzadkowa-tymczasowa/alban12-stronniczy-niekompletny-1">Alban12</a> tworzy stutysięczny post na <span class="underline">Mikroblogu</span></p><p></p><p>7 sierpnia - wprowadzenie <a href="jbzd/struktura-jbzd-i-jej-dzialy/elementy-strony-zalazek/ranking-uzytkownikow-do-uzupelnienia">Rankingu Plusów</a></p><p></p><p>14 sierpnia - ?wpisanie do regulaminu zakazu zakładania multikont</p><p></p><p>wrzesień - najstarsze wrzutki na dziale <span class="underline">Templatki</span></p><p></p><p><em>listopad/grudzień</em> - permban na główne konto <span class="underline">nonoxxa</span></p><p></p><p><em>grudzień</em> - początek <span class="underline">wojny</span> z <span class="underline">ruszofym</span> na mikroblogu</p><p></p><p></p><h1>2021</h1><p>6 stycznia - konto<span class="underline"> ruszofy_konik</span> zostaje wyłączone z pełnienia roli admina, koniec <span class="underline">wojny z ruszofym</span> na mikroblogu</p><p></p><p>luty - podziękowania ze strony taty Leona za wpłaty na zbiórkę</p><p></p><p>10 lutego - chwilowo zresetowany zostaje <a href="jbzd/elementy-strony-zalazek/ranking-uzytkownikow-zalazek-artykul-w-budowie">ranking plusów</a> przy profilu, liczone w nim są tylko osoby, które dostały plusa po wystąpieniu usterki (błąd wkrótce naprawiono)</p><p></p><p>11 lutego - <span class="underline">Nowson</span> nowym adminem dla <a href="jbzd/dzialy-zalazek/poczekalnia-oczekujace-zalazek">Poczekalni</a> i <span class="underline">Mikrobloga</span>, zapisuje wnioski o zmiany</p><p></p><p>19 lutego - wyniki finału <span class="underline">3 edycji Best Waifu Tournament</span> na dziale <a href="jbzd/struktura-jbzd-oraz-jej-dzialy-i-panele/dzialy-nsfw-niekompletny/anime-w-trakcie-edycji">Anime</a></p><p></p><p><em>10 marca</em> - początek <span class="underline">III wojny stulejnej</span> </p><p></p><p><em>16 marca</em> - koniec III wojny stulejnej, ostrzeżenie adminów o możliwym wyłączeniu jbzd na noc przez prace techniczne, do którego ostatecznie nie dochodzi</p><p></p><p>28 marca - <span class="underline">zmiana wyglądu interfejsu JBZD</span>: plusy i różne oznaczenia przeniesione z dołu na małe ikonki po prawej, mniejsze tytuły dzid - zdaje się, że wg większości użytkownik zmiana na gorsze, jak napisał użytkownik </p><p></p><blockquote><p>"Wygląda teraz jak jakiś portal z lat 90 xd" - Oxenfurt</p></blockquote><p></p><p>9 kwietnia - utworzenie wariacji, a właściwie zmodyfikowanie zjawiska “fali” <span class="underline">Wypierdalaj</span> - <span class="underline">Procedury</span></p><p></p><p>12 kwietnia - początek gównoburzy między <span class="underline">Pawłem697</span> a <span class="underline">ironboyem</span>.</p><p></p><p>noc 21-22 maja - <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/dzidowcy/edziorychu12-niekompletny-nieaktualny">Edziorychu12</a> dostaje permbana, <span class="underline">niepokoje z tym związane na poczekalni</span></p><p></p><p>23 maja - <span class="underline">Sugondese</span> odzyskuje czerwony kolor nicku po długim czasie bycia szarym</p><p></p><p>28 maja - <span class="underline">Chleb1234</span> otrzymuje szary kolor nicku na głównym koncie po długim czasie zniechęcania do siebie dzidowców</p><p></p><p>30 maja - Edziorychu12 odzyskuje konto </p><p></p><p>7 czerwca - wprowadzenie <span class="underline">sklepu JBZD</span> na górny panel głównego interfejsu na stronie, raczej negatywny odbiór społeczności na obecne wzory na koszulkach, kubkach, poduszkach i bluzach. <a href="jbzd/administracja-jbzd">Administracja</a> deklaruje, że planuje dodawanie kolejnych wzorów zaprojektowanych przez społeczność.</p><p></p><p>10 czerwca -  początek pierwszego oficjalnego <span class="underline">konkursu JBZD</span> - <span class="underline">Polska Gurom</span> - sponsorowany przez BetFan oraz dodanie <span class="underline">zakładki "Konkurs"</span> na panelu głównego interfejsu strony przez <span class="underline">Sklepem</span></p><p></p><p><em>12 czerwca</em> - początek <span class="underline">wojny memowej między JBZD, a Kwejkiem</span></p><p></p><p>22 czerwca - powstają dwa nowe działy zamknięte: <span class="underline">Hobby</span> i <span class="underline">Kuchnia</span></p><p></p><p>2 lipca - <span class="underline">NotiOneGo</span> wprowadzone przez administrację jako przedmiot do kupienia oraz jako przedmiot darowany przy premium na okres 1 roku (później chyba wycofane)</p><p></p><p>18 lipca - konkurs Polska Gurom wygrywa użytkownik <span class="underline">PatrzyszMiSiena</span>, społeczność jest podirytowana, bo nie był to mem najbardziej plusowany (ba, pod względem liczby plusów był daleko w tyle, na pewno poza pierwszymi 20 miejscami)</p><p></p><p><em>22 lipca</em> - <span class="underline">MrAaron9999</span> rozpoczyna serię przetłumaczonych brazylijskich filmików na <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/hard-wersja-z-starej-wiki-1">Hardzie</a></p><p></p><p>30 lipca - chwilowy powrót <span class="underline">Ugabugamena</span>. Także pierwsze potwierdzone zarejestrowanie <span class="underline">conocnej zmiany</span> <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/kolor-nicku">kolorów nicków</a> o godzinie 3 nad ranem.</p><p></p><p>31 lipca - seria wrzut na głównej, promująca jazdę zgodnie z przepisami</p><p></p><p>2 sierpnia - na pasku polecanych na prawym panelu strony pojawia się bezpośredni odnośnik do zrzutki, jednocześnie na <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny">działach NSFW</a> występuje błąd, wideo i gify się nie odtwarzają się bez wejścia we wrzutę, nie wyświetla się poprawnie cała prawa część strony, łącznie z <span class="underline">zakładką priv</span> oraz <span class="underline">powiadomieniami</span>, niewidoczny także panel prawy wrzuty tj. plusy, zgłoś spam, dodaj do ulubionych itd. Wg niektórych, powodem usterki było dodanie linka do zbiórki na pasek <span class="underline">polecanych</span>. </p><p>Jednocześnie na <a href="jbzd/dzialy-zalazek/poczekalnia-oczekujace-zalazek">poczekalni</a> gdzieś od godziny 12 dochodzi trwa masowe wrzucanie wszelkiej maści ketchupu, musztardy, majonezów, tzw. <span class="underline">Wojna majonezów</span>. Trwa tylko jeden dzień i samoistnie wygasa. Między 18, a 20 naprawiono błąd występujący na działach zamkniętych.</p><p></p><p>3 sierpnia - premiera odcinka prezentacyjnego (zerowego) serii JbzdTV, oficjalne rozpoczęcie serii, która zakończyła się wkrótce na odcinku nr 1 o <span class="underline">Chlebie1234</span>.</p><p></p><p>7 sierpnia - szybki dzidowy <span class="underline">konkurs, na "najbardziej popierdoloną" ciekawostkę</span>, wygrywa osoba z największą liczbą plusów, nagrodą jest koszulka ze <span class="underline">sklepu JBZD</span>. Na pierwszym miejscu tamtego34, solski1234 z koszulkami, a byczeqbartek otrzymuje konto premium na 6 miesięcy.</p><p></p><p>14 sierpnia - edziorychu12 zapowiada swoje odejście na emeryturę, ale ostatecznie z niego rezygnuje </p><p></p><p>16 sierpnia - początek roleplayu tzw. <span class="underline">wojny domowej</span> na Mikroblogu</p><p></p><p><em>22 lub 23 sierpnia</em> - <span class="underline">drugi szybki dzidowy konkurs</span>, tym razem wygrać ma najbardziej plusowany cytat filmowy, jednak dochodzi do niezwykłej sytuacji, w której wszyscy komentujący są minusowani, tak że bilans oceny każdego komentarza jest ujemny, pomimo że pojawiło się ich ponad 1500</p><p></p><p><em>26 lub 27 sierpnia</em> - tzw. przełom w dziedzinie dzidowej masturbacji [1]</p><p></p><p>27 sierpnia - permban dla<span class="underline"> NoJakNieJakTak (Ferdek)</span> (powraca on wkrótce na nowym koncie)</p><p></p><p>29 sierpnia - Pierwszy raz memem <span class="underline">niedzieli wieczur</span> zirytowany znacznie jest <span class="underline">patrys1</span>.</p><p>Od tego czasu pojawia się także parę kont trolli o nickach "zarządzanie" "notyfikacje" itp. </p><p>Wykorzystują one niedorobienie strony, po kliknięciu na ich nick link odsyła do danych ustawień. </p><p></p><p>5 września - pierwsza niedziela spamu "niedzielą wieczur" na złość <span class="underline">patrysowi1</span>. Tak rodzi się tradycja powtarzana od tej niedzieli co tydzień, a patrys1 jest jednoznacznie utożsamiany z tym memem. Powstają także nawiązania do tradycji w inne dni tygodnia.</p><p></p><p>15 września - reklama serwisu <span class="underline">Pyk.pl</span>, dzidowych minigierek na <span class="underline">Posty.pl</span>. Na ówczesny stan jest wiele niedorobień.</p><p></p><p>20 września - początek <span class="underline">konkursu "Stosunki międzynarodowe"</span> sponsorowanego przez zespół Nocny Kochanek. Pojawia się wiele memów trollujących (nie związanych zupełnie z tematem) z tagiem konkursu.</p><p></p><p>19 września - <span class="underline">Hazim z Damaszku</span> powraca z widokiem ze swoich schodów</p><p></p><p>21 września - seria memów z trollami z wiedźmina 2 na głównej</p><p></p><p>26 września godzina 20 - inwazja <span class="underline">Armii Dzidowej</span> na poczekalnie <span class="underline">Kwejka</span> w ramach trwającej <span class="underline">wojny dzidowo-kwejkowej</span></p><p></p><p><em>28 lub 29 września</em> - reklama <span class="underline">radia dzidowiec.com</span> na poczekalni (w formie lekkiego spamu, samo "radio" zostało założone rzekomo 27 września)</p><p></p><p>29 września - pojawienie się zakładki <span class="underline">Pyk</span> na dolnym pasku w <a href="jbzd/dzialy-zalazek/poczekalnia-oczekujace-zalazek">poczekalni</a></p><p></p><p>30 września -  krótki <span class="underline">konkurs na haiku o adminie</span>. </p><p>Wieczorem <span class="underline">wyłączenie strony na kilkanaście minut</span>, później powolne ładowanie, niewyświetlanie się nowych postów na mikroblogu (można wejść tylko wpisując link bezpośredni lub oznaczenie), błędy naprawione w pełni rano następnego dnia</p><p></p><p>3 października - obwieszczenie <span class="underline">Armii Dzidowej</span> z ich oficjalnego profilu, niedziela wieczur ma być przede wszystkim prowadzona poza dzidką jako "towar eksportowy" (post i konto znikają po kilku minutach)</p><p></p><p><em>~6 października</em> - wyniki <span class="underline">konkursu Nocnego Kochanka</span> </p><p></p><p>11 października - użytkownik <span class="underline">&lt;KM&gt;</span> przypomina dowcipy o Łotyszach</p><p></p><p><em>13 października (lub wcześniej)</em> - odnośnik do<span class="underline"> Pyk</span> także na <a href="jbzd/dzialy-zalazek/strona-glowna-jbzd-zalazek">stronie głównej</a></p><p></p><p><em>23 października (lub wcześniej)</em> -<em> </em>powstanie sojuszu <span class="underline">Kazika</span>, <span class="underline">Kartagińczyka</span> i <span class="underline">BogaczaMorrowinda</span> (na początku listopada wszystkie 3 konta mają już perbmany). Także spam pewnym obrazkiem z Harrego Pottera.</p><p></p><p>24 października - ruszają dzidowe rozprawy sądowe (później NSPI)</p><p></p><p>listopad - sprawa permbana dla <span class="underline">AdolZyjeWArgentynie</span> oraz zbanowanie <span class="underline">prawdziwegofana</span></p><p></p><p>16 listopada - pojawienie się odnośnika do <span class="underline">pyk.pl</span> na głównej, w mobilnej wersji jbzd.</p><p>Wyświetla się to jako małe zielone okienko z napisem "Pyk?" na dole strony, na lewo od kostki (losowe) i strzałki w prawo (następna strona).</p><p></p><p>27 listopada - spam informacją o zamknięciu portalu roksa</p><p></p><p>28 listopada  - spam pewną przeróbką ze szklanym domem, informacją o śmierci Apetora (oraz tradycyjnie niedzielą wieczur)</p><p></p><p>4 grudnia - usunięcie <span class="underline">Dzida Wiki</span> przez Fandom</p><p></p><p>9 grudnia - repost <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/ksiega-dzidy-w-trakcie-poprawek">Księgi Dzidy</a> (dzida <span class="underline">Borata</span>) dostaje się na główną i zyskuję pewną rozpoznawalność.</p><p></p><p>12 grudnia - dzida <span class="underline">Akcja z Twierdzy Zamość</span> zyskuje ponad 3 tysiące komentarzy, prawdopodobnie najwięcej komentarzy pod dzidą nie pisanych celowo do bicia rekordu.</p><p></p><p>13 grudnia - <span class="underline">brzyda</span> ma czerwony nick</p><p></p><p>14 grudnia - <span class="underline">dzidowiec34</span> przy pomocy innych osób z <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/anime-w-trakcie-edycji">działu anime</a> tworzy <span class="underline">dzidę-chan</span></p><p></p><p></p><h1>2022</h1><p><em>5 lub 6 stycznia</em> - <span class="underline">antyelana</span> rozpoczyna swoją serię wrzut nt. wydarzeń w Kazachstanu na <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/hard-wersja-z-starej-wiki-1">Hardzie</a> (tak jak wcześniej relacjonował 2 wojnę w Karabachu).</p><p></p><p><strong>noc 9/10 stycznia</strong> -  <span class="underline">Noc oczyszczenia</span> (rzekomo akcja przeciwko multikontom), zbanowanie <span class="underline">Borata</span> i po fali niezadowolenia oraz przez nieroztropne podanie ip Borata do publicznego widoku - <span class="underline">noszekresze</span> usuwa swoje konto</p><p></p><p>10 stycznia - anulowana petycja o odbanowanie Borata</p><p></p><p>styczeń - można ponownie plusować dzidy, komy i profile wcześniej zaplusowane (poprzednie oceny nie zostały usunięte, tylko w jakiś sposób ?zarchiwizowane)</p><p></p><p>14 stycznia - konto <span class="underline">jezus-malina</span> traci uprawnienia admina, tego samego dnia pojawia się nowe konto admina - <span class="underline">zgnitybanan</span></p><p></p><p>28 stycznia - niedoszła ustawka <span class="underline">pawła697</span> i <span class="underline">eldersscrolssa</span> (ten drugi to Kartagińczyk lub BogaczMorrowind)</p><p></p><p>19 lutego - pierwszy od lat soft hard na <a href="jbzd/dzialy-zalazek/strona-glowna-jbzd-zalazek">Głównej</a></p><p></p><p>noc 23/24 lutego - niejaki <span class="underline">haxxn</span> podejmuje się stworzenia skryptu do oznaczenia pierwszych 49100 pierwszych osób w rankingu pod swoim postem (następnego dnia po inwazji Rosji na Ukrainę, jego konto ma permbana po jego kontrowersyjnych wypowiedziach o tym zdarzeniu)</p><p></p><p><strong>24 luty</strong> - Pewien zamęt na stronie w związku z wybuchem pełnoskalowej wojny na Ukrainie. </p><p>Spam memem z Jasiem Fasolą jako Polską jedzącą pączki, gdy ruski czołg rozjeżdża Ukrainę (wojna wybucha w tzw. Tłusty Czwartek).</p><p>Początek kryzysu banów na jbzd, <span class="underline">Czystka Ukraińska</span> (permbany otrzymują ?wszystkie konta wyrażające się jakkolwiek anty-ukraińsko, pierwszego dnia podobno parę zielonych i jedno z czerwonym nickiem). </p><p>Głosy anty-ukraińskie (nie koniecznie prorosyjskie) z poranka niemal znikają.</p><p>Na <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/hard-wersja-z-starej-wiki-1">hardzie</a> pojawia się mnóstwo filmików z rosyjskiej inwazji. Część z nich zostaje usunięta, także z kontami zbanowanymi.</p><p><span class="underline">Antyelana</span> temu przewodzi, rozpoczyna regularne relacjonowanie sytuacji z Ukrainy.</p><p>Około godziny 18 obok znaczka "jbzd" pojawia się ukraińska flaga, a awatary ustawione domyślnie, zamieniają się na <span class="underline">małpę Kamila</span> na tle ukraińskiej flagi, godzinę potem awatary domyślne przywrócono do stanu wcześniejszego.</p><p>W tym czasie widać też uaktywnienie się podejrzanych kont.</p><p></p><p>25 luty - powstaje dział <span class="underline">Wojna</span> celem przeniesienia wzmożonej aktywności związanej z wojną poza <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/hard-wersja-z-starej-wiki-1">Harda</a>.</p><p>Ochotniczy dzidowcy wspierają Anonymous w przeciążaniu rosyjskich stron internetowych. </p><p></p><blockquote><p>Działa to w ten sposób, że po wejściu na adres podany w poście na dzidce na komputerze użytkownika odpalany jest skrypt, zasypujący rosyjskie strony ciągłymi żądaniami. Mówiąc wprost, moc obliczeniowa komputera zostaje użyta do przeciążenia serwerów - działa to jak atak DDoS. Według "ekspertów" z JBZD, skrypt jest bezpieczny, ale wchodzicie na własne ryzyko - <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/dzidowcy/bloedenordling-niekompletny-brak-obrazkow">BloedeNordling</a></p></blockquote><p></p><p>26 luty - permban m. in. na główne konto <span class="underline">Chleba1234</span> i <span class="underline">SynaProboszcza</span> w związku z <span class="underline">Czystką Ukraińską</span>, coraz więcej dzidowców nagłaśnia ten problem ryzykując bana (do  których dalej licznie dochodzi, ich natężenie spada co prawda przez parę następnych dni, jednak sam fakt bardziej sporadycznego banowania pozostaje jeszcze długo).</p><p>Poruszenie wśród społeczności <a href="jbzd/dzialy-zalazek/poczekalnia-oczekujace-zalazek">poczekalni</a> znacznie wzrasta w kolejnych dniach.</p><p></p><p>27 luty - wieczorem znaczne spowolnienie ładowania się strony, przez pewien czas przy ładowaniu strony zaczęła pojawiać się informacja ~: </p><blockquote><p>“checking browser .. 5, 4, 3.. (...) DDOS protection by(…)”. - komunikat przy ładowaniu strony</p></blockquote><p>Informacja przypięta u góry strony przez administrację około 21:56: (o 22:20 sytuacja wraca do normy).</p><blockquote><p>Jesteśmy w trakcie dostawania kolejnej maszyny, przepraszamy za utrudnienia. - informacja Administracji</p></blockquote><p>Podczas trwającej Czystki, użytkownik <span class="underline">Mathias</span> prowadzi spis zbanowanych użytkowników. Wśród podawanych powodów banów oprócz “ruski troll” pojawiają się także “obraza administracji”, wyraźne poruszenie z społeczności poczekalni.</p><p></p><p>28 luty - pojawia się jeszcze więcej memów i wrzut traktujących o banowaniu przez administrację, proces banowania przy tym znacznie wyhamowuje (dotyczy głównie multikont wcześniej zbanowanych), dla wielu dzidowców jest to koniec/końcówka Czystki. <span class="underline">Perdikas44</span> wraca z 3 dniowego bana i przewodzi ruchom anty-admińskim. Administracja stosuje lżejsze kary czy po prostu usuwanie konkretnych postów (zamiast banowania, szczególnie “dużych” użytkowników jak <span class="underline">&lt;KM&gt;</span>, <span class="underline">PeterFuhrer</span> czy <span class="underline">drago13</span>). Częściej występują bany czasowe zamiast permów.</p><p></p><p><em>1 marca</em> - słynny mem o <span class="underline">noszekresze</span> banującym dzidowców </p><blockquote><p>“będę was banował jebane skurwysyny, jebane ścierwa (...) Czego nie rozumiesz?!”. - postać <span class="underline">noszekresze </span>w memie użytkownika <span class="underline">Hugo6002</span></p></blockquote><p></p><p>2 marca - usunięcie konta <span class="underline">Perdikasa44</span> (zupełne, nie w formie permbana, następnego dnia podobnie dzieje się z użytkownikiem JuanPabloV).</p><p></p><p>17 marca - nick <span class="underline">krwistegozwieracza</span> (dawniej piotrektroya) wyświetla się przy dzidach, następnego dnia traci złoty kolor.</p><p></p><p>22 marca - spam memami wojennymi z majonezem winiary przez <span class="underline">Apotheosa</span></p><p></p><p>26 marca - z panelu głównego znika zakładka <span class="underline">Sklep</span> </p><p></p><p>28 marca - spam memem z Willem Smithem, z powodu incydentu na ceremonii wręczenia Oscarów.</p><p></p><p>noc 1/2 kwietnia - s<span class="underline">pam petycjami na poczekalni o ustanowienie saguaro44 moderatorem</span>. Jest to bait/żart na prima aprilis autorstwa <span class="underline">Joyeqa</span> na który złapało się wielu dzidowców. Podpisane petycji było tak dużo, że zajęły, aż 12 stron na kategorii <span class="underline">spam</span>. Trwał on pomimo tego, że Joyeq już około 1 w nocy (parę godzin po rozpoczęciu akcji) przyznawał w komentarzach, że to prank.</p><p></p><p><em>6 kwietnia (lub trochę wcześniej)</em> - konto <span class="underline">TolaOla</span> zostaje zamienione na "Administracja". Jednocześnie konto to wysyła <span class="underline">wiadomości prywatne</span> z kodami podarunkowymi do innych stron, do użytkowników wstawiających wiele autorskich memów.</p><p></p><p>13 kwietnia - około 16 lub wcześniej, zmieniono flagę ukraińską obok loga strony, na skrzyżowaną polską i ukraińską, po 2 miesiącach nawoływań.</p><p></p><p>20 kwietnia - <a href="jbzd/spolecznosc-i-kultura-jbzd-zalazek/dzidowcy/terry1996">terry1996</a>, po 2137 dniach działalności (a właściwie od założenia konta), ogłasza opuszczenie Dzidy (przez kilka dni jeszcze odpowiada na komentarze)</p><p></p><p>30 kwietnia - zmiana ikonki obok loga, skrzyżowane flagi zmienione na flagę polską z napisem "1-3 maja"</p><p></p><p>maj - <span class="underline">Czystka Ukraińska</span> dalej trwa w zmniejszonej formie, w postaci sporadycznych banów czasowych, przerzucania wrzut na spam lub usuwania ich. Czasem dochodzi jednak do permbanów, także na większe konta.</p><p></p><p><strong>5 maja</strong> - początek długo wyczekiwanego <span class="underline">rozwoju jbzd</span>, wiele zmian, m. in: pojawienie się <span class="underline">szukajki</span>, podgląd części statystyk użytkownika bez wchodzenia na profil, wyświetlanie tekstu w dzidach jako czerwona czcionka na czarnym tle. <a href="jbzd/administracja-jbzd">Administracja</a> jednocześnie prowadzi <span class="underline">dziennik zmian</span> i utrzymuje kontakt ze społecznością w ramach koordynacji aktualizacji strony. </p><p></p><p>7 maja - aktualizacja nowego playera o możliwość pobierania filmów</p><p></p><p>14 maja - ponowny ban dla <span class="underline">Borata</span> (?po tym jak został odbanowany). </p><p></p><p>21 maja - zmiana layloutu na stronie (przywrócono nazwę działów "NSFW" (wcześnej: "zamknięte")) i dodanie działu nsfw <span class="underline">Muzyka</span>.</p><p></p><p>22 maja - początek odbudowy <span class="underline">JebzWiki</span> na Wikiful</p><p></p><p><strong>23 maja</strong> - utworzenie <span class="underline">systemu odznak</span> (<span class="underline">złota</span>, <span class="underline">srebrna</span>, <span class="underline">kamienna</span>), przyznawanych komentarzom i postom za monety. Monety odnawiają się użytkownikom w ilości zależnej od posiadania <span class="underline">premium</span> i otrzymanych odznak (przykładowo złota odznaka daje 500 monet na konto osobie która ją dostała).</p><p></p><p>25 maja - “<span class="underline">wypierdalaj</span>” w komentarzach podświetla się jako pogrubiony czerwony tekst</p><p></p><p>28 maja - dodanie <span class="underline">odznaki wypierdalajka</span>, która zamiast nagradzać monetami, zabiera obdarowanemu 69 monet z konta. Także przebudowanie systemu filtracji treści razem z <span class="underline">zakładką top</span> zastąpiona możliwością wyszukiwania najbardziej plusowanych treści z dowolnego zakresu czasowego na dowolnym dziale. </p><p></p><p><strong>31 maja około godz. 20</strong> - początek <span class="underline">IV Wojny Stulejnej</span>, wprowadzenie ograniczeń dla użytkowników bez <span class="underline">premium</span> - niedostępna <a href="jbzd/dzialy-zalazek/strona-glowna-jbzd-zalazek">główna</a> od 5 strony oraz <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny">działy nsfw</a>. Część użytkowników otrzymała premium na miesiąc za darmo (głównie aktywni, administracja twierdzi, że w przydziale kierowała się aktywnością właśnie). </p><p>Liczni dzidowcy uznają to za koniec strony (pojawiają się memy z tonącym Titanikiem itp.).</p><p>Odezwa <a href="jbzd/administracja-jbzd">administracji</a> o konieczność tego kroku w utrzymaniu strony. Zdecydowany opór społeczności, manifesty, memy o sytuacji oraz podjęcie walki z adminami. Początek organizowania się <span class="underline">Dzidy Walczącej</span>.</p><p></p><p>1 czerwca -  Trwa chaos. Popołudniu tłumaczenia i propozycja administracji o zmniejszenie ograniczeń odrzucona jako niewystarczająca. Legendy działów <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/hard-wersja-z-starej-wiki-1">Hard</a> i <span class="underline">Wojna</span> - <span class="underline">KM</span> i <span class="underline">antyelana</span> - jednocześnie ogłaszają odejście z JBZD. </p><p>Przeniesienie działów Wojna, <span class="underline">Metale</span>, <span class="underline">Templatki</span>, <span class="underline">Hobby</span>, <span class="underline">Kuchnia</span>, <span class="underline">Muzyka</span> “pod” kategorie otwarte (?przygotowanie do wyłączenia tych działów z ograniczenia, jako planowany kompromis?)</p><p>Wieczorem pierwsze zebranie Rady <span class="underline">DW</span>, w jego trakcie admini ogłaszają na jbzd, że wycofają zmiany.</p><p></p><p><strong>2 czerwca rano</strong> - koniec IV Wojny stulejnej, informacja “Wolna Dzida” z wyjaśnieniami.</p><p>Ograniczenia pozostają tylko na działach <span class="underline">Własne F</span> i <span class="underline">Własne M</span> oraz powstałym tego dnia dziale <span class="underline">Premium</span>, oddanym przez administrację użytkownikom do zagospodarowania. Na dziale tym wybucha aktywność, pojawiają się najróżniejsze treści, jednak trwają pewne konflikty w związku z różnymi wizjami dzidowców na to co może/nie może tam trafiać, które w następnych tygodniach przybierają na sile.</p><p></p><p>6 czerwca - dodanie możliwości filtracji treści z całej jbzd przez tagi (dwuczłonowe tagi jednak nie działają). Zmiany w ramach rozwoju jbzd znacząco spowalniają.</p><p>Masowe wstawianie ww2 editów na dział <span class="underline">Hard Memy</span>, część konfliktu o los działu. </p><p></p><p>7 czerwca - <span class="underline">ZielonyKubek</span> otrzymuje dwutysięczną <span class="underline">odznakę wypierdalajkę</span></p><p></p><p>czerwiec - <span class="underline">4 edycja Best Waifu Tournament</span> na <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/anime-w-trakcie-edycji">dziale Anime</a>, zakończona 8 lipca</p><p></p><p>11 lipca - dotychczasowy rekord w ilości złotych odznak na dzidce “Dynamika płynów” autorstwa <span class="underline">CombatWombat</span>.</p><p></p><p>17 lipca - osiągnięcie tysiąca odpowiedzi w jednym wątku pod postem <a href="https://jbzd.com.pl/obr/2338325/jytuui">https://jbzd.com.pl/obr/2338325/jytuui</a> </p><p>W tym czasie post “<span class="underline">Ruchanie</span>” uzyskuję w sumie 20 tysięcy komentarzy.</p><p></p><p>19 lipca 2022 - <span class="underline">krzychu77</span> tworzy mozaikę 722, a następnie ~7 tys awatarów dzidowców z <a href="jbzd/elementy-strony-zalazek/ranking-uzytkownikow-zalazek-artykul-w-budowie">rankingu plusów</a></p><p></p><p>26 lipca - wieczorem <a href="jbzd/administracja-jbzd">Administracja</a> w jakiś sposób, domniemanie nieumyślnie z powodu zmian w systemie powiadomień, wyłączyła możliwość dodawania komentarzy. Następnego dnia rano sytuacja wróciła do normy.</p><p></p><p>30 lipca - permban dla użytkownika <span class="underline">JadKielbasiany</span> w ramach Czystki Ukraińskiej, tego samego dnia jeszcze wraca na nowym koncie.</p><p></p><p>12 sierpnia - koniec wielkiej dramy wypierdalajkowej między <span class="underline">PawłemON</span>, a <span class="underline">PanAsas</span></p><p></p><p>16 sierpnia - <span class="underline">nowa dodawajka treści</span> w wersji beta: usunięto stare, dawno nieaktualne opcje jak przycisk +18, dodano możliwość edycji koloru i wielkości tekstu (domyślnie ustawienie na białe na czarnym tle, które aplikuje się do wszystkich wcześniej wstawionych dzid). Można także wstawiać w dowolnej kolejności obrazki, tekst, filmiki i odnośniki do youtube. Jest to nowy system działania <span class="underline">galerii</span> (stare galerie teraz także wyświetlają się naraz obrazki jeden po drugim). Wieczorem poprawiono błędy które wystąpiły po aktualizacji (np. nie dało się wejść w starsze obrazki z opisem). Wyszukiwanie szukajką pokazuje teraz tylko tytuły dzid, nie kafelki z obrazkami.</p><p>Znika <span class="underline">zakładka z proponowanymi tagami</span>.</p><p></p><p>31 sierpnia <em>(lub trochę wcześniej)</em> - zmiana działania <span class="underline">odznaki wypierdalajki</span>, teraz już nie odejmuje żadnych monet z konta "obdarowanego"</p><p></p><p><em>sierpień/wrzesień</em> - edycja regulaminu, a przynajmniej podpunktu 11.2.6, zamiana tekstu o możliwości perbmana na konto o niskiej kulturze wypowiedzi na możliwość perbmana dla:</p><blockquote><p> “11.2.6 Użytkownicy którzy nie stosują się do zasad współżycia społecznego - za takie działania uznać możemy notoryczne wrzucanie treści które nie podobają się lub irytują większość społeczności i są wrzucane celowo wykorzystując brak innych regulacji” - Regulamin</p></blockquote><p></p><p>1 września  - <span class="underline">spam tapetami</span> na <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/anime-w-trakcie-edycji">dziale anime</a> (pierwszy zaś miał miejsce 4 lata wcześniej w 2018)</p><p></p><p>4 września - koniec <span class="underline">wojny o dział premium</span> (a przynajmniej części dotyczącej furry), spamy gejfurry z kolejnych multikont na poczekalni jako zemsta za bany na premce (trwają do 15 września, gdy owy osobnik kapituluje).</p><p></p><p>22 września - wprowadzenie możliwości <span class="underline">obserwowania działów i użytkowników</span> (co umożliwia obchodzenie ukrycia profilu w zakresie wstawionych obrazków) oraz zapowiedzenie rychłego połączenia kategorii i działów w jeden twór.</p><p></p><p>25 września - spam niedzielą wieczur o meczu Polski z Walią, który zostaje jednak pokonany postowaniem spamem parkouru (mem z serialu The Office)</p><p></p><p>28 września - pierwsze losowanie do dzidolotka</p><p></p><p>koniec września - zmiana ceny premium, reklamy jego pozostają jednak przez jakiś czas niezaktualizowane (po aktualizacji jest napisane: “zmieszamy cenę <span class="underline">Dzidy Premium</span> do kosztu 4,99 miesięcznie” pomimo de facto wzrostu ceny, mniejsza jest w porównaniu do ceny sprzed maja/czerwca).</p><p></p><p>6 października - zmiana koloru kafelka przenoszącego do komentarzy z niebieskiego na czerwony na wersji mobilnej (później zmieni kolor na czarny).</p><p></p><p>16-19 października - <span class="underline">spamy memowe o kerfusiu</span> (szczególnie 18-19)</p><p></p><p>17 października - tag #plech zostaje użyty po raz 30 tysięczny na <span class="underline">mikroblogu</span></p><p></p><p>19 października - rano duże poparcie zyskuje otwarte krytykowanie memów o kerfusiu, wieczorem powstaje krótkotrwały ruch wrzucania memów o jezusie przeciw kerfusiowi</p><p></p><p>24 października wieczór - masowy spam na dziale <span class="underline">Wojna</span> w wykonaniu ?ruskich trolli/?zbanowanych przez admina dzidowców o antypatiach wobec Ukraińców. </p><p>Jeden z głównych wrzucających (na świeżym koncie) twierdził na poczekalni, że dostał bana na czerwone 2 letnie konto w czasie <span class="underline">czystki ukraińskiej</span>. Jednocześnie jego posta o tej sprawie na <a href="jbzd/dzialy-zalazek/poczekalnia-oczekujace-zalazek">poczekalni</a> przyjęto dwojako - z jednej strony go wyśmiano, z drugiej nie widziano w tym czegoś bardzo złego. </p><p>Widać polaryzacje Poczekalnia-Wojna co do traktowania tej sprawy.</p><p></p><p>27 października - spam przybiera na sile, trwa z przerwami od 24 (do spamu użyto memów, gej porno, postów z zapytaniem, celowo wrzucanych na zły dział</p><p></p><p>1 listopada - dziwny ban na konto <span class="underline">krowa148</span> (pozostały dzidy jak przy zbugowanym usunięciu konta, komentarzy nie da się pobrać skryptem jak w przypadku innych zbanowanych)</p><p></p><p>9 listopada - spam (typu tunel) z pistoletami, a także innymi broniami (zapoczątkowany przez <span class="underline">Sugondese</span> (druga wrzuta tunelu), a zakończona wrzutą zbierającą je niemal wszystkie przez <span class="underline">d4nona</span>.</p><p></p><p>11 listopada - dodanie polskiej flagi na święto niepodległości (po kilku mocno plusowanych postach na poczekalni krytykujących jej brak), na główną trafia selfrepost wspomnianej wrzuty d4nona sprzed 2 dni z podpisem “Z okazji Dnia Niepodległości przywołuję wszystkich do broni!”.</p><p></p><p>12 listopada - ?potężny wzrost aktywności ruskich trolli na JBZD, Wykopie i stronach internetowych z wiadomościami, pokrywający się z utratą Chersonia przez rosjan dzień wcześniej.</p><p>Zdarzenie to ma potwierdzać pewną tendencję, zauważalną od kilku miesięcy - gdy rosjanie przegrywają na froncie, znacznie wzrasta aktywność trolli w internecie. Wiele troll-kont ma być uśpionymi kontami, założone nawet kilka lat temu. Uśpione konta mają daty od 2015 do 2019. Nowe konta są sprzed kilku dni. Część kont ma losowe znaki jako nick. W większości przypadków tak, puste konta bez kontentu. Ale niewielka część ma wstawiony jeden-dwa memy kilka lat temu.</p><p>Weryfikację ich ilości utrudnia fakt, że od kiedy admin wprowadził możliwość logowania się po zbanowaniu, multikonta są od razu usuwane po banie, a w ich miejsce wchodzą kolejne (z czego korzystają także liczne inne trolle).</p><p></p><p>14 listopada - <span class="underline">pht</span> informuję na <span class="underline">serwerze dc</span> <span class="underline">darkmemes</span>, że planuje usunąć swoją stronę wraz z końcem roku</p><p></p><p>15 listopada - spam związany z  ̶p̶o̶c̶z̶ą̶t̶k̶i̶e̶m̶ ̶I̶I̶I̶ ̶W̶o̶j̶n̶y̶ ̶Ś̶w̶i̶a̶t̶o̶w̶e̶j̶   uderzeniem rakiety na Przewodów. </p><p>Powstaje też pewna mała teoria spiskowa: powiązanie tego wydarzenia z  niewypałem znalezionym przez pewnego dzidowca (jednak doszło do niego parę godzin po uderzeniu rakiety).</p><p></p><p>19 listopada - admin odzywa się po długim czasie milczenia:</p><p></p><blockquote><p>" @[jutub3d] przebudowujemy działy i rozwijamy funkcjonalność spam, pierwsze efekty będą po następnym tygodniu, a reszta do świąt. [edit] zwiększamy również zabezpieczenia w tworzeniu multikont. Wcześniej nie mieliśmy pomysłu jak pogodzić sprawę ponownego używania numeru tel, a dostosowania się pod wymogi rodo (możliwość wykasowania wszystkich swoich informacji)." - Administracja</p></blockquote><p>Na ?ponad rok jest to jednak jedyna odpowiedź wprost do społeczności.</p><p></p><p><em>22 listopada</em> - reklamowany jest <span class="underline">white week</span> na <span class="underline">premium</span>, cena -50%</p><p></p><p>26 listopada - przekopiowanie tekstu Bilbii pod jedną wrzutą na <span class="underline">dział hobby zamknięte</span></p><p></p><p>30 listopada - 3 grudnia - tzw. <span class="underline">Bitwa Plagiatowa</span>, zgłoszenie splagiatowanej wrzuty “Eksperyment Wszechświat 25” na głównej do adminów i wywalczenie jej usunięcia.</p><p></p><p>2 grudnia - <span class="underline">HazimzDamaszku</span> obchodzi urodziny</p><p></p><p>5 grudnia  - użytkownicy działu <span class="underline">Wojna</span> wspominają poległego tamtego dnia Janusza Szeremetę, polskiego ochotnika, który był także wewnętrznym memem na dziale ("Kapitan Cena" - polska wersja kpt. Price'a z CoD).</p><p>Wrzucane są dawne filmiki Janusza, nekrologi, niektórzy użytkownicy piszą także kondolencje dla rodziny pod profilem Janusza na FB. </p><p></p><p>9 grudnia  - wysyp memów o pitbullach (i innych rasach psów agresywnych, zwłaszcza wobec dzieci)</p><p>Pojawiają się teorie, że pitbull ostatnio odgryzł adminowi jaja podczas stosunku, dlatego wrzuca na główną memy szkalujące tą rasę psów.</p><p></p><p>18 grudnia  - spam związany z finałem mundialu (wcześniej też były, ale mniejsze, jak już to przy meczach Polaków, standardowo).</p><p></p><p>24 grudnia ok. 14:30 - <span class="underline">Dzidowa Wigilia</span></p><p></p><p>26 grudnia - usunięcie konta <span class="underline">Kaczykuper</span> (wcześniej stracił czerwony kolor nicku)</p><p></p><p></p><h1>2023</h1><p>1 stycznia - mały alkotunel na Nowy Rok oraz filmik podsumowujący rok 2022.</p><p></p><p>4 stycznia - <span class="underline">plaga wypierdalajek</span>, niemal wszystkie posty z poczekalni z paru godzin dostały przynajmniej 1 <span class="underline">wypierdalajkę</span> i <span class="underline">złotą odznakę</span>.</p><p></p><p>5 stycznia - <span class="underline">egh</span> usuwa konto</p><p></p><p><strong>6 stycznia</strong> - usunięcie <span class="underline">wypierdalajki</span>, początek <span class="underline">Wojny wypierdalajkowej</span></p><p>Drugą zmianą która pojawiła się w dzienniku zmian jest </p><p></p><blockquote><p>“Backend pod wprowadzenie zmian w działach” - Dziennik Zmian</p></blockquote><p></p><p>Wieczorem spam czołgami, sparaliżowanie <a href="jbzd/dzialy-zalazek/poczekalnia-oczekujace-zalazek">poczekalni</a>. Serie banów czasowych, a także permbany. </p><p>O 23 samozwańcze ustanowienie godziny policyjnej na memy niezwiązane z protestem. </p><p></p><p>7 stycznia - rankiem osłabniecie działań związanych z buntem, przez następne ~parę/kilka dni trwa partyzantka, potem głównie w formie memów, pozostawienia <span class="underline">odznaki wypierdalajka</span> w awatarze czy odezw w tej sprawie.</p><p></p><p>10 stycznia ok. 19:30 - 20:10 - akcja prowokacja z januszowymi i dziwnymi memami</p><p></p><p>15 stycznia - <span class="underline">gagger.pl</span> - nowa alternatywa dla dzidki spod ręki <span class="underline">Deadlyo0</span>. Reklamował swoją stronę wcześniej, jednak mniej otwarcie, dostał wkrótce potem bana na 3 dni i permbana.</p><p></p><p>16 stycznia - użytkownik <span class="underline">serainox</span> zauważa w wrzucie na poczekalni, że <span class="underline">wypierdalajki</span> dalej są obecne w kodzie strony.</p><p></p><p><strong>15 luty</strong> - pierwszy odcinek <span class="underline">Dzidowieści</span> użytkownika <span class="underline">okońzościom</span></p><p></p><p>6 marca - przez działalność pewnych użytkowników, chwilowo druga strona poczekalni nie ładuje się poprawnie</p><p></p><p>7 marca - <span class="underline">Inquerion</span> otrzymuje permbana</p><p></p><p>11 marca - brak możliwości edytowania komentarzy (nie da się zapisać po edycji), naprawione zostaje 2 dni później.</p><p></p><p>12 marca - pierwsza wrzuta z serii <span class="underline">nosacze post ap</span>o <span class="underline">snoffa</span> (ta jeszcze tylko z tagiem polska post apo)</p><p></p><p><strong>13 marca </strong>- ponownie wybucha ?<span class="underline">II Wojna Wypierdalajkowa</span>. O 20:40 wrzucono pierwszy czołg, zaś decydujące było pojawienie się kolejnego ok. 10 minut później i zaraz po tym kolejnego. Od 21 do 21:40 coraz bardziej nasilała się skala spamu, którą przerwały masowe banowanie (na 3 dni) przez administrację oraz kasacja postów, szczególnie w godzinach 22-23. Kolejne czołgi i memy o sytuacji pojawiały się jednak przez resztę nocy, a także trwało w następnych dniach.</p><p></p><p>14 marca - zauważono błąd, przez który reklama Orlenu na <span class="underline">dziale Motoryzacja</span> wyświetla się także użytkownikom z wykupionym <span class="underline">premium</span> (po publikacji posta o tym mówiącym, błąd naprawiono jeszcze tego samego dnia).</p><p></p><p>15 marca - zauważono obecność reklam także w sekcji komentarzy (między komami)</p><p></p><p>18 marca - aktywność tzw. czołgistów z <span class="underline">Wojny Wypierdalajkowej</span></p><p></p><p>24 marca - na <a href="jbzd/dzialy-zalazek/dzialy-nsfw-zamkniete-niekompletny/hard-wersja-z-starej-wiki-1">Hardzie</a> pojawia się wysyp treści ze zwierzęcym gore, które zostaje usunięte przez admina dopiero następnego dnia. Jest to osobista krucjata użytkownika <span class="underline">nightguard</span>. Admin zdjął mu jedną wrzutę, więc ten postanowił w ramach walki z cenzurą zasypać Harda zwierzęcym gore.</p><p></p><p><strong>1 kwietnia</strong> - atak komentarzy widmo, mimo że ich liczba przy wrzucie wyświetla się na ponad 0, nie widać ich pod postem. Pokazują się także rzekomo zdublowane powiadomienia.</p><p></p><p>3 kwietnia - odpowiedzi do komentarzy losowo są wstawiane jako zwykły komentarz z oznaczeniem (błąd został naprawiony prawdopodobnie tego samego dnia), zjawisko widoczne pod memami: </p><p>https://jbzd.com.pl/obr/2987733/tortura-papieska </p><p>https://m.jbzd.com.pl/obr/2988154/no-to-beziasty-sie-zesra</p><p></p><p>9 kwietnia  - użytkownikom działu Wojna ostatecznie udało się "nauczyć" algorytmy Googla kojarzenia Prigożyna jako cwelożyna. Dzięki wielomiesięcznemu publikowaniu wrzut z dowódcą Wagnera, podpisanym jako "cwelożyn", Google zaczął kojarzyć typa z tym określeniem. Dodatkowo, od wczoraj hasło to było tak często wyszukiwane, że teraz jest automatycznie sugerowane i po jego wyszukaniu od razu wyskakuje artykuł na Wikipedii o Prigożynie.</p><p></p><p>noc 10/11 kwietnia  użytkownik Ferengi oznacza masowo grupę dzidowców pod postem sprzed 2 lat niewidocznym komentarzem o treści “kutas kozła”</p><p>https://m.jbzd.com.pl/obr/1826615/gruby-magnes</p><p></p><p>11 kwietnia - wrzuta o id wynoszącym 3 000 000</p><p></p><p>27 kwietnia - aktywność czołgistów z Wojny Wypierdalajkowej</p><p></p><p>10 maja - trolling z ograniczeniami komentarzy i liczbą powiadomień jako “E” (wyświetlają się pod wybranymi wrzutami, gdy zjedzie się do komentarzy)</p><p></p><p>14 maja - chwilowo mikroblog nie działa przez aktywność trolli powyżej</p><p></p><p>noc 15/16 maja -  wyświetlają się znów informacje w dodawajce komentarzy o ich ograniczeniach i o “komentarzach premium”</p><p></p><p>16 maja - znów zhakowano mikroblog. Chwilę po wejściu wywala do strony "kup premium".</p><p></p><p>18 maja - zauważono wyczyszczenie treści z konta Administracja </p><p></p><p>~maj zauważalne osłabienie aktywności działu Własne F, wzmagają się o tym głosy na dziale i memy. Przez następne miesiące pojawia się bardzo mało wrzut, nawet jak na standardy działu, przez zaprzestanie aktywności/usunięcia kont głównych twórców kontentu. Mimo to dział fukncjonuje jakoś przez następne lata.</p><p></p><p>19 maja - zostaje odnotowane, że strona gagger.pl już nie funkcjonuje</p><p></p><p>25 maja - pawel895 (21 w rankingu plusów) skasował konto</p><p></p><p>30 maja - zorganizowana akcja działu wojna przeciwko onucy Panasiukowi na jego konta na twitterze i telegramie (masowe zgłoszenia do OMZRiK, ABW i innych instytucji)</p><p>https://m.jbzd.com.pl/obr/3074775/uprzejmie-donosze</p><p></p><p>1 czerwca - logo jbzd na mikroblogu zostaje chwilowo zmienione na tęczowe przez trolle</p><p></p><p>8 czerwca - eghuj zpermbanowany za “multikonta”</p><p></p><p><strong>17 czerwca</strong> - wielka przebudowa systemu działów (konserwacja od ~9:30 do ~11:05), połączenie kategorii sfw i nsfw w działy, przy czym wybrane są 18+ (z działów nsfw które nie otrzymały tego oznaczenia dział cosplay oraz dział wojna wcześniej zablokowany dla niezalogowanych).</p><p></p><p>18 czerwca - administracja otrzymuje niebieskie nicki, złote od teraz trafiają do top 100 użytkowników według wzoru opartego głównie na liczbie plusów pod dzidami użytkownika</p><p></p><p>19 czerwca - administracja zmieniła wyświetlanie się działu cosplay po ostatniej aktualizacji, tak by jego kontent nie trafiał do poczekalni</p><p></p><p>25 czerwca - Reklama przeceny premium “Bezpieczne wakacje to wakacje w piwnicy”, -50%</p><p></p><p>2 lipca - rozdzielenie Harda i Hardmemów (Hardmemy znów są niepodległym działem)</p><p></p><p>początek lipca 2023 - dużo memów z Robertem Lewandowskim, w związku z jego sprawą o "kłamliwe memy" na kwejku. O ile nie jest to spam, to widoczne ich jest większe stężenie, szczególnie widać to na Stronie Głównej.</p><p></p><p>10 lipca- spam memów z Władem Palownikiem, jako wszelkimi przedmiotami/osobami których nazwa kończy się na -”ownik”</p><p></p><p>12 lipca - dodano opcję wyciszenia działu/poddziału</p><p></p><p>15 lipca - zielonykubek oraz zieionykubek zostają zpermbanowani</p><p></p><p>20 lipca - wprowadzono poprawki w gifach, dodano dział pytanie-jbzd (jednak nie wyświetla się na liście działów przez 2 następne dni), dodano możliwość wywoływania autora posta przez “@op”</p><p></p><p>21?24 lipca - użytkownik "Woombat" (95 miejsce w rankingu) skasował konto</p><p></p><p>30 lipca - błąd z oznaczeniem zawierającym słowo "wypierdalaj" został naprawiony. Nicki zawierające słowo op, również. Obecnie oznaczenie autora działa tylko w formie "@op"</p><p></p><p>noc 3/4 sierpnia - mała akcja wypierdalajkowa w nocy (od około północy do godziny 9 rano_</p><p></p><p>4 sierpnia - tunel z “days without hard pipe”</p><p></p><p>6 sierpnia - konto chleb1234 ponownie założone</p><p></p><p>15 sierpnia - początek serii memów obśmiewających elektrodę</p><p></p><p>28 sierpnia - pojawienie się trolla z kwejka “stillnotbitten” na poczekalni, który wrzuca na nią anime i w następstwie ban</p><p></p><p>11 września - spam memami z okazji rocznicy 9/11 i przegranego meczu z Albanią</p><p></p><p>13 września - pojawienie się nowego admina - mythlin</p><p></p><p>21 września - dodano oddzielny przycisk do wyciszania działu polityka</p><p></p><p>5 października - przy opcji przedłużenia premium wyświetla się opcja przedłużenia go monetą kolekcjonerską jbzd </p><p></p><p>7 października - dodano dział wojna Palestyna - izrael</p><p></p><p>8 października - początek krótkiej Czystki Żydowskiej</p><p></p><p>18 października - historia Mcr, który rozkręcił jakiemuś januszowi lapka. Także poszukiwanie grawerowanej kamiennej dzidy w Warszawie</p><p></p><p>październik - społeczność irytuje się na zalew memów z ai, prawdopodobnie w tym miesiącu dodano także na google Dzidowy Zegar Gdynia Główna</p><p></p><p>1 listopada -  Admin przez pomyłkę wrzucił mema Oxenfruta na samą górę w oczekujących zamiast na główną</p><p></p><p>12 listopada - akcja dzidowska na pixelplanet (trwa jeszcze 2 kolejne dni jakieś obrazków rysowanie pixelami)</p><p></p><p>15 listopada - petycja eghuja o ??? ,trollowanie z podpisywaniem książek przez songokana24 i hanysa</p><p></p><p>16 listopada - celowe popularyzowanie szablonu z panem z 1 z 10, który chciał zostać memem (praktycznie nie ma ryzyka)</p><p></p><p>17 listopada - początek whiteweek na jbzd (obniżka ceny premium)</p><p></p><p>22 listopada - zalew poczekalni przeróżnymi memami (tak naprawdę wszystkie mają jedną puentę - “na siebie”) dotyczącymi Pana Artura który zdobył maksymalną liczbe punktów w wielkim finale 1 z 10</p><p></p><p>27 listopada - dzida Cprojecta ze zrzutką na tablet graficzny za 7 tysięcy złotych, która powoduję ogromną gównoburzę i ostracyzm</p><p></p><p>1 grudnia - spam petycją o zwrócenie wypierdalajek (autorem pierwszej także eghuj)</p><p></p><p>5 grudnia - akcja z fotoshopowaną łysiejącą aptekarką; także: mem z hard memów trafia na główną</p><p></p><p>12 grudnia - spam memami o Braunie z gaśnicą</p><p></p><p>16 grudnia - konkurs na nft organizowany przez samego <span class="underline">Głuszczenkę</span> na zewnętrznej stronie. Zostaje zwyzywany jako scam, po czym dzida wkrótce znika.</p><p></p><p></p><h1>2024</h1><p>1 stycznia - spam kursem euro wg Google</p><p></p><p>3 stycznia  niedoszła ustawka Cprojecta i torpedała zakończona memami na poczekalni (wynikła z przewodnictwa tego drugiego w nagonce na cprojecta, po jego poście proszącym o pomoc pieniężną w celu kupienia tableta za 7 tysięcy złotych)</p><p></p><p>4 stycznia - premiera platynowej dzidy w pełnej wersji</p><p></p><p>6 stycznia - ponowny atak zwolenników wypierdalajek w rocznicę ich usunięcia (głównie w formie różnorodnych memów)</p><p></p><p>styczeń - wojna wtyczkowa między krzychu77, a TTCHPOQ7MSLXGCMFA (znanym również ze skrótu innego nicku jako idd, bądź po prostu wtyczkarz/łysy)</p><p></p><p>22 stycznia - Cproject staje się szary</p><p></p><p>23 stycznia - akcja-spam ze zdjęciami/memami przypraw</p><p></p><p>24 stycznia - akcja użytkownika “zusu” (wtyczkarz/idd) w celu plusowania konta Krzycha77. Także spam memami “kiedy masz ujemne IQ”.</p><p></p><p>26 stycznia godziny wczesnoporanne - nitka z “nieszczęśliwym losem dzidowca”</p><p></p><p>27 stycznia - Cproject dogaduje się na zostanie wyplusowanym wtyczką TTCHPOQ7MSLXGCMFA/idd z szarości, sprzedanie screenów rozmowy z krzychem, drama na jebzwiki o krzycha i wtyczkarza idd, torpedał usuwa konto</p><p></p><p>1 luty - Cproject ponownie szary</p><p></p><p>10 luty - zbanowanie elektroharmoni i eghuja za obrażenie administracji, która odezwała się pierwszy raz od miesięcy</p><p></p><p>luty - wzmożone minusowanie profili przez wtyczkę idd</p><p></p><p>21 luty - Elowrzud traci całą zawartość profilu od 2014 roku (~9 tysięcy wrzut), ponieważ pisał otwarcie o byciu minusowanym przez z wtyczkę platynową dzidę idd (admin więc usunął kontent z jego konta). Spodziewa się perma i pisze wiadomości pożegnalne do wybranych osób. Napisał też posta pożegnalnego na dział Anime.</p><p>Także spam poczekalni związany ze śmiercią Tomasza Komendy.</p><p></p><p>29 lutego/1 marca - spam obrazkiem “kiedy przeglądasz oczekujące i patrzysz jak jeden podpierdala memy od drugiego” (zaczął się rankiem i dalej co i rusz się przewija)</p><p></p><p>2 marca, okolice godziny 14:19 - <strong>przywrócenie wypierdalajek</strong>, jednak cena wzrosła z 420 do 1000 monetek oraz nadal, po zmianie z sierpnia 2022, nie zabierają monetek "obdarowanemu". Chwilowo nie pojawiają się powiadomienia o otrzymaniu tejże odznaki co jest wkrótce naprawione. Powstaje zalew memów o wypierdalajkach, pomimo wzrostu ceny pojawiają się one nieproporcjonalnie częściej pod dzidami na poczekalni i głównej w porównaniu do czasów przed usunięciem (chwilowe).</p><p></p><p>17 marca - brzyda chwali się uzyskaniem ponownego szarego koloru po poproszeniu o pomoc Dzidamafii i ich mocy przerobowych do minusowania konta z wielu multikont</p><p></p><p>~30 marca - TTCHPOQ7MSLXGCMFA/idd przywraca na chrome odświeżoną wersję wtyczki platynowa dzida</p><p></p><p>31 marca - działalność konta parodiującego wtyczkarza idd, w tym czasie tamten prowadzi dalej zakrojoną szeroko kampanie minusowania upatrzonych użytkowników przy użyciu multikont i wtyczki</p><p></p><p>?kwiecień - drama związana z użytkownikiem dicecube5 (tzw. szop)</p><p></p><p>1 kwietnia - admin przypina na głównej mocno zminusowany komentarz i poplusowane odpowiedzi (filmik z Błachowiczem)</p><p></p><p>3 kwietnia - kamienna dzida wysłana w świat</p><p></p><p>4 kwietnia - wysokie zainteresowanie akcją kamiennej dzidy/Geokamień, z powstającymi kolejnymi egzemplarzami</p><p></p><p>7 kwietnia (okolice 19-20:00) - powstaje oddzielny <span class="underline">dział Geokamien</span> (część poczekalni), dalsze wysokie zainteresowanie dzidacatchingiem (popularność akcją jednak spada po paru tygodniach)</p><p></p><p>maj - duża popularność memów o rogactwie Roberta Lewandowskiego</p><p></p><p>2 maja (od 12-13:00) - awaria serwerów jbzd (błąd 500) co jednak zostaje w miarę szybko naprawione, na mikroblogu posty wstawione od czasu awarii nie wyświetlają się domyślnie (najnowsze/?gorące), da się do nich wejść tylko po linku bezpośrednim</p><p></p><p>3 maja - na górze strony (chyba tylko przy pierwszym otworzeniu) pojawia się baner z informacją:</p><blockquote><p>W ciągu 159 dni wojny Izraela z Hamasem zmarło 12300 niewinnych dzieci. Sekretarz generalna Amnesty International: “Izraelskie siły w szokujący sposób lekceważą życie ludności cywilnej”.</p></blockquote><p> Mikroblog działa zaś już poprawnie</p><p></p><p>14 maja - pojawienie się oferty kupna jbzd Premium na rok z koszulką (“moja baza moja twierdza”, przy kupnie koszulki przesyłany sms-em jest kod do aktywacji premium). Zniżka na rok premium, dodatkowo na stałe przy kupnie premium konto jbzd zasilane jest 150 tys. monet za rok premium i 20 tys. monetek za miesiąc.</p><p></p><p>21 maja - admin wrzuca naraz kilka dzid użytkownika IIWŚwK, w tym tę sprzed 4 tygodni</p><p>także:</p><p></p><p>21 maja  - dzidmafia z multi publikuje <strong>dzidę informująca o <span class="underline">wycieku haseł</span></strong> części kont na jbzd. Konta te zostają oznaczone w komentarzach w celu zaalarmowania. Przynajmniej część z nich jest podana wielokrotnie, 2-3 razy, ale mimo wszystko jest to 800 komentarzy po 2 oznaczenia. Lista ta jednak prawdopodobnie nie zawiera w sobie kont przejętych wcześniej przez wtyczkarza idd/TTCHPOQ7MSLXGCMFA czy dzidmafię oraz osobom którym je rozdawała. Większość kont jest z maks paroma plusami na profilu, z minimalna aktywnością, część jest też już usuniętych w momencie publikacji. Z ważniejszych oznaczeni są deadlyo0, Max Walonko III, randomname, totalchwdp, Polacco. Dwóch pierwszych usunęło swoje konta odpowiednio w styczniu 2023 i czerwcu 2022, jednak trzeci i czwarty dziękuje w komentarzu o ostrzeżenie, tak jak i pewna mała część osób oznaczonych (większość nie odpowiada w ogóle, tak jak i Polacco).</p><p>Najnowsze z oznaczonych kont z wycieku to te z lata 2023, tak więc wyciek był zbierany przynajmniej na parę tur, skoro część z nich wtedy była już usunięta. </p><p>Inną kwestią jest fakt, że większość pozycji w wycieku była zapisana hasłem z emailem zamiast nickem z hasłem.</p><p></p><p>8 czerwca (okolice 3 w nocy) - dicecube5 ostatecznie żegna się ze stroną w długim poście na dziale inne nsfw</p><p></p><p>10 czerwca - w dodawajce treści przywrócono przycisk 18+. Oznaczone nim dzidy nie wyświetlają się niezalogowanym, tzn. wyświetla się kłódka z wymuszeniem zalogowania do zobaczenia tej konkretnej treści</p><p>Prawdopodobnie jest to związane z pojawieniem się paru materiałów hard na głównej w ostatnim czasie.</p><p></p><p>22 czerwca - ma miejsce prezentacja rozszerzonej "oficjalnej" wersji “krzyczę głośno jebać ż**ów” autorstwa Katoredpill. Także tego dnia dzidowcy biorą udział w akcji dzwonienia na telefon grupy granica w celu przeciążenia (następnego dnia już niedostępny).</p><p></p><p>lipiec - dochodzi do grupy banów w częściowo w związku z rocznicą rzezi wołyńskiej, jednak administracja banuje przede wszystkim osoby ją szkalujące, zarzucające banowanie upamiętniania Wołynia (znamienny przypadek konta pioterxd2) czy tych którzy zwracają uwagę na owe banowanie (TwojStaryNajebany). W tym czasie jednocześnie na główną trafia bowiem ileś wrzut jawnie przeciwko Ukraińcom odnoszących się do 1943 i bandery.</p><p></p><p>6 lipca - srednidemon publikuje dzidę pokazującą, jakoby z jego konta ktoś inny wysłał wiadomość o treści [Komentarz został usunięty], podobnie twierdziła inna osoba, stąd teoria, że administracja może pisać z danego konta użytkownika lub ktoś inny się włamał (wtyczkarz idd), stąd też obawy i prośba o odzew społeczności i moderacji na te sytuację.</p><p>Następnego dnia otrzymuje permbana, a wkrótce jego konto zostaje ponownie założone i natychmiast zbanowane (prawdopodobnie jak parę innych osób w tym czasie było to działanie administracji w celu usunięcia wszelkich </p><p>dowodów i zablokowania możliwości założenia niezbanowanego konta z tym samym nickiem-&gt; kaczmardla/dlakaczmar, tycho, pioterxd2, ?egh/eghuj, ?dziobasty).</p><p>W tym też czasie jakieś konto podszywa się pod osoby z darkmemes czy egha, podejrzewa się idd.</p><p></p><p>sierpień - popularzacja “meepów”, wstawiania codziennie rano przez użytkownika meep krótkiego filmiku z bekasem</p><p></p><p>4 sierpnia - akcja shitpostu/memów wywyższających jeja.pl nad jbzd na poczekalni</p><p></p><p>12 - 14 sierpnia - okresowe przymulenie działania serwerów jbzd</p><p></p><p>29 sierpnia - drama pseudopedofilska między pikachuu, a and_relax</p><p></p><p>początek września - załatany zostaje błąd pozwalający udostępnić naraz kilka postów przez szybkie klikanie “wrzuć” oraz na przeciąganie wielu sztuk kontentu typu filmik w pole dodawania, by załadować kilka jednocześnie</p><p></p><p>druga połowa września - chicght wstawia serię wrzut ze swojego eksperymentu w wannie</p><p></p><p><strong>8 września</strong> - godzina 00:50 - ~03:00 (skutki usunięte dopiero około 7 nad ranem) - atak TTCHPOQ7MSLXGCMFA/idd postami z kodem w tytułach dzid wyświetlających okienka powiadomień związanych z użytkownikiem cip3k jakoby zhakował stronę (i później wiele innych), nieudane próby wymuszenia tym sposobem automatycznego usunięcia konta u przeglądających poczekalnię, inne osoby też częściowo się do tego przyłączają, niektóre osoby z dzidmafii wysyłają z multikont posty przez kod w tytule wylogowujące celem zapobiegnięcia usunięcia kont czy przenoszące humorystycznie na stronę jebzdzidy ze smoczą pokojówką ze skyrima, później pojawiły się przeniesienia do jeszcze kolejnych stron czy podstron na samej jbzd. Jakaś część multikont czy nierozważnie naśladujących to osób otrzymuje bana.</p><p>W związku z całą sytuacją do interwencji admina poczekalnia była niemal zupełnie pozbawiona nowych normalnych wrzut. O 5:47 pojawiła się ostatnia wrzuta, po której nastąpiła konserwacja serwerów trwająca do godziny 7 rano.</p><p></p><p>19 września - permban na konto borsukaPL</p><p></p><p>29 września - permban dla użytkownika Cip3k i czasowy dla CzujnegoWilka</p><p></p><p>październik - działalność bota spamującego z kolejnych nowych kont linkiem do rzekomego narzędzia deepnude AI</p><p></p><p>3 października - dodanie watermarków do filmików przy udostępnianiu treści, związane z tym zmiany w regulaminie (być może wprowadzone już parę dni wcześniej) i okienko potwierdzenia zgodności dzidy z regulaminem</p><p></p><p>?12 października - udostępnienie planów dzidmafii co do szantażowania mikrowiczów zdjęciami na mikroblog</p><p></p><p>12 - ?14 października - masowe spadanie kont/multikont z wycieku, niekonieczne bany, a często zablokowanie</p><p></p><p>23 października - popołudniem pikachuu spamuje poczekalnie w ramach protestu i chcąc dostań bana, ponieważ administracja nie zwalcza wtyczkarzy z dzidmafii go szkalujących/nękających z multikont. W następstwie tego, wieczorem, seraniox otrzymuje permbana, a wkrótce pikachuu unbana od czasówki. Dzidmafia w akcie zemsty od około 21-22 zaczyna<strong> spam poczekalni treściami nsfw</strong> <strong>z multikont</strong>, później także innymi losowymi szok-wrzutami, a przy użyciu multikonta piszą masowo pod dzidami dane szydercze frazy oznaczając przy tym określone osoby obrane za cel (pikachuu, kurwaras, administracja) lub te które wypowiadają się pod wrzutami multikont. Spam trwa do około 1:30 (końcowa część to to samo zdjęcie odbytu wrzucane z bota na 2 kontach), jednak admin pomimo wrzucenia porcji memów na oczekujące około północy czyści cały spam i banuje multiki dopiero około 6-7 rano.</p><p></p><p>27 października (od około 20:00) - dzidmafia spamuje oczekujące epileptycznymi gifami oskarżając o to poprzez innych mikroblog</p><p></p><p>28 października - ujawnia się nowy admin - ProgamistaApple - wraz ze swoją bardzo źle przyjętą dzidą o tworzeniu aplikacji jbzd na urządzeniach IOS</p><p></p><p>6 listopada - spam politycznymi memami w związku z wyborami w USA</p><p></p><p>8/9 listopada - permban dla CzujnegoWilka</p><p></p><p>11 listopada - ujawnia się kolejny nowy admin - ProgamistaAndroid - podobnie obrzucony błotem w swojej autopromocji poprawiania aplikacji jbzd na Androida. Obaj nowi programiści odbywają przepychankę słowną w komentarzach między sobą. Także tego dnia kilka memów o Marszu Niepodległości na głównej.</p><p></p><p></p><p></p><p><strong>Autor</strong>: Główny edytor (opracowane na podstawie wpisów zespółów starej jebzwiki oraz aktywnych na wikowym dc)</p><p><strong>Ostatnia edycja</strong>: 16.11.2024</p></div>
+<div class='wiki-content' id='js_clean_wiki_content' v-if='loaded' v-show='!editing'>{{{ content }}}</div>
+<div :class='{hidden: !editing}' id='js_wiki_content'></div>
+</div>
+</div>
+</div>
+<gallery-modal></gallery-modal>
+<input id='blur-editor-helper' readonly tabindex='-1' type='text'>
+
+</div>
+</div>
+<footer>
+<div class='container'>
+<a class='plain' href='https://www.kapowcorp.com/'>
+©
+2026
+KapowCorp, Inc.
+</a>
+<ul class='pull-right'>
+<li>
+<a class='plain' href='https://www.wikiful.com/terms'>
+Terms
+<span class='extra'>of Service</span>
+</a>
+</li>
+<li>
+<a class='plain' href='https://www.wikiful.com/privacy'>
+Privacy
+<span class='extra'>Policy</span>
+</a>
+</li>
+<li>
+<a class='plain' href='mailto:support@wikiful.com'>
+Contact
+</a>
+</li>
+</ul>
+</div>
+</footer>
+
+<div :style='{top: positions.top + &#39;px&#39;, left: positions.left + &#39;px&#39;}' id='context-menu' v-cloak v-show='showing'>
+<ul v-if='menuItems'>
+<li :class='{&#39;no-click&#39;: menuItem.disabled}' @click='handleClick(menuItem)' v-for='menuItem in menuItems'>
+{{ menuItem.text }}
+<span class='hotkey' v-if='menuItem.keys'>
+{{{ hotkey(menuItem) }}}
+</span>
+</li>
+</ul>
+</div>
+
+<script id='image-modal' type='text/x-template'>
+<div class='image-modal'>
+<modal :modal-title='source != &quot;existing&quot; ? &quot;Add an Image&quot; : &quot;Edit Image&quot;' :spinner='saving' class='modal-fluid' spinner-text='Saving...'>
+<span slot='save'>
+<button @click='deleteImage()' class='hide delete enlarge-sm' tabindex='8' v-if='source == &#39;existing&#39;'>
+Delete
+</button>
+<button @click='hide()' class='fixed-sm enlarge-sm' tabindex='1000'>
+Cancel
+</button>
+<button @click='updateImage()' class='save fixed-sm enlarge-sm'>{{ source != 'existing' ? "Add" : "Save" }}</button>
+</span>
+<div class='preview-modal' slot='body'>
+<div class='preview input-row' v-el:preview>
+<label>Preview</label>
+<div class='preview-wrapper'>
+<div class='js_preview_area' v-el:content></div>
+</div>
+</div>
+<div class='properties'>
+<size-form :height.sync='height' :original-height='originalHeight' :original-width='originalWidth' :show-aspect-ratio='true' :size.sync='size' :width.sync='width' v-if='originalWidth'></size-form>
+<div class='input-row align' v-if='size == &#39;large&#39;'>
+<label>Align</label>
+<button disabled>Left</button>
+<button class='active'>Center</button>
+<button disabled>Right</button>
+<div class='checkbox'>
+<label class='disabled'>
+<input class='wrap-text' type='checkbox'>
+<span>Wrap Text</span>
+</label>
+</div>
+</div>
+<div class='input-row align' v-if='size != &#39;large&#39;'>
+<label>Align</label>
+<button @click='align = &#39;left&#39;' class='{{align == &#39;left&#39; ? &#39;active&#39; : &#39;&#39;}}'>
+Left
+</button>
+<button @click='align = &#39;center&#39;' class='{{align == &#39;center&#39; ? &#39;active&#39; : &#39;&#39;}}'>
+Center
+</button>
+<button @click='align = &#39;right&#39;' class='{{align == &#39;right&#39; ? &#39;active&#39; : &#39;&#39;}}'>
+Right
+</button>
+<div class='checkbox'>
+<label :class='{disabled: align == &#39;center&#39;}'>
+<input class='wrap-text' type='checkbox' v-if='align == &#39;center&#39;' v-model='false'>
+<input class='wrap-text' tabIndex='6' type='checkbox' v-if='align != &#39;center&#39;' v-model='wrapText'>
+<span>Wrap Text</span>
+</label>
+</div>
+</div>
+<div class='input-row caption'>
+<label>Caption</label>
+<textarea rows='3' v-model='caption'></textarea>
+</div>
+</div>
+<button @click='deleteImage()' class='delete' tabindex='8' v-if='source == &#39;existing&#39;'>
+Delete Image
+</button>
+</div>
+</modal>
+</div>
+</script>
+
+<div :class='{&#39;hide&#39;: !showing, &#39;editing&#39;: showing == &#39;edit-link&#39;}' :style='{top: positions.top + &#39;px&#39;, left: positions.left + &#39;px&#39;}' id='insert-link-popup' v-cloak>
+<div :style='{left: arrowLeft + &#39;px&#39;}' class='arrow bottom' v-show='showing == &#39;edit-link&#39;'></div>
+<div :class='{&#39;hide&#39;: showing != &#39;hint&#39;}' class='link'>
+<a :target='linkTarget' @click='fixbug()' href='{{ link }}' id='insert-link-popup-link' rel='noopener noreferrer' title='{{ link }}' v-if='useLinkForHint'>{{ link }}</a>
+<span id='insert-link-popup-link' title='{{ link }}' v-if='!useLinkForHint'>{{ link }}</span>
+<span>–</span>
+<a @click='show()' id='insert-link-popup-change'>Change</a>
+<span>&#124;</span>
+<a @click='remove()' id='insert-link-popup-remove'>Remove</a>
+</div>
+<div :class='{&#39;hide&#39;: showing != &#39;edit-link&#39;}' class='edit-link'>
+<div class='text-input'>
+<label>Text:</label>
+<input type='text' v-el:text v-model='text'>
+</div>
+<div class='link-input'>
+<label>Link:</label>
+<input autocapitalize='none' type='text' v-el:link v-model='link'>
+<button :disabled='!link' @click='applyChanges()' class='save fixed-sm apply' v-hotkey.literal='enter'>Apply</button>
+</div>
+<div class='internal-link'>
+<button :disabled='!hasChildren' @click='openInternalLinkModal()' class='save inverse no-hover'>
+Link to another page in this Wiki
+</button>
+</div>
+<div class='cancel-sm'>
+<button @click='_hide()' class='enlarge-sm'>Cancel</button>
+</div>
+</div>
+</div>
+
+<script id='map-modal' type='text/x-template'>
+<div class='map-modal'>
+<modal :modal-title='isNew ? &quot;Add a Map&quot; : &quot;Edit Map&quot;' class='modal-fluid'>
+<span slot='save'>
+<button @click='deleteMap()' class='hide delete enlarge-sm' tabindex='8' v-if='!isNew'>
+Delete
+</button>
+<button @click='hide()' class='fixed-sm enlarge-sm' tabindex='1000'>
+Cancel
+</button>
+<button :disabled='isDisabled' @click='updateMap()' class='save fixed-sm enlarge-sm' tabindex='100'>
+{{ isNew ? "Add" : "Save" }}
+</button>
+</span>
+<div class='preview-modal' slot='body'>
+<div class='preview input-row' v-el:preview>
+<label>Preview</label>
+<div class='preview-wrapper'>
+<div class='js_preview_area' v-el:content></div>
+</div>
+</div>
+<div class='properties'>
+<div class='input-row street-address'>
+<label>Street Address</label>
+<input @blur='setToGoogleResults()' debounce='250' tabindex='1' type='text' v-el:address v-model='address'>
+</div>
+<div class='input-row addy-multiple'>
+<div class='zip'>
+<label>Zip</label>
+<input @blur='setToGoogleResults()' debounce='250' maxlength='5' tabindex='4' type='text' v-el:zipcode v-model='zipcode'>
+</div>
+<div class='state'>
+<label>State</label>
+<input @blur='setToGoogleResults()' debounce='250' maxlength='2' tabindex='3' type='text' v-el:state v-model='state'>
+</div>
+<div class='city'>
+<label>City</label>
+<input @blur='setToGoogleResults()' debounce='250' tabindex='2' type='text' v-el:city v-model='city'>
+</div>
+</div>
+<div class='input-row align'>
+<label>Align</label>
+<button @click='align = &#39;left&#39;' class='{{align == &#39;left&#39; ? &#39;active&#39; : &#39;&#39;}}' tabindex='5'>
+Left
+</button>
+<button @click='align = &#39;center&#39;' class='{{align == &#39;center&#39; ? &#39;active&#39; : &#39;&#39;}}' tabindex='5'>
+Center
+</button>
+<button @click='align = &#39;right&#39;' class='{{align == &#39;right&#39; ? &#39;active&#39; : &#39;&#39;}}' tabindex='5'>
+Right
+</button>
+<div class='checkbox'>
+<label :class='{disabled: align == &#39;center&#39;}'>
+<input class='wrap-text' type='checkbox' v-if='align == &#39;center&#39;' v-model='false'>
+<input class='wrap-text' tabIndex='6' type='checkbox' v-if='align != &#39;center&#39;' v-model='wrapText'>
+<span>Wrap Text</span>
+</label>
+</div>
+</div>
+<div class='input-row'>
+<label>Title</label>
+<textarea rows='3' tabindex='7' v-model='title'></textarea>
+</div>
+</div>
+<button @click='deleteMap()' class='delete' tabindex='8' v-if='!isNew'>
+Delete Map
+</button>
+</div>
+</modal>
+</div>
+</script>
+
+<div :style='{top: positions.top + &#39;px&#39;, left: positions.left + &#39;px&#39;}' id='table-menu' transition='quick-fade' v-cloak v-show='showing'>
+<ul>
+<li @click='handleClick(action.onClick)' v-for='action in tableActions' v-hotkey='action.keys' v-tooltip:top='tooltip(action)'>
+<div :class='toClass(action.text)'></div>
+</li>
+</ul>
+</div>
+
+<script id='toolbar' type='text/x-template'>
+<div class='toolbar' id='js_wiki_toolbar'>
+<div :disabled='!selectedBlockType.command' class='toolbar-headings dropdown' v-dropdown.popout>
+<div class='dropdown-toggle' v-tooltip.literal='Change Styles'>
+<i class='icon icon-caret-down'></i>
+<span class='show-gt-sm'>{{ selectedBlockType.text }}</span>
+<span class='show-sm'>{{ selectedBlockType.smallText }}</span>
+</div>
+<ul class='dropdown-menu'>
+<li @mousedown.stop.prevent='clickButton(blockType)' v-for='blockType in blockTypes' v-tooltip:right='blockType.tooltip'>
+<p :class='blockType.class'>{{ blockType.text }}</p>
+</li>
+</ul>
+</div>
+<ul class='toolbar-buttons'>
+<li :id='getButtonId(button.name)' v-for='(key, button) in buttons'>
+<button :class='{active: button.active, disabled: button.disabled}' @mousedown.stop.prevent='clickButton(button)' v-if='!(button.activeMenu &amp;&amp; button.active)' v-tooltip='button.tooltip'>
+<i :class='button.icon' class='icon'></i>
+</button>
+<div class='active-menu dropdown' v-dropdown.popout v-if='button.activeMenu &amp;&amp; button.active'>
+<button class='dropdown-toggle active' v-tooltip='button.tooltip'>
+<i :class='button.icon' class='icon'></i>
+<i class='icon icon-caret-down'></i>
+</button>
+<ul class='dropdown-menu'>
+<li :class='{disabled: !menuItem.available}' @mousedown.stop.prevent='clickMenuItem(menuItem)' v-for='menuItem in button.activeMenu' v-tooltip:right='menuItem.tooltip'>
+<p>{{ menuItem.name }}</p>
+</li>
+</ul>
+</div>
+</li>
+<li id='undo_sm'>
+<button :disabled='buttons.undo.disabled' @mousedown.stop.prevent='clickButton(buttons.undo)' v-bind:class='{&#39;active&#39;: buttons.undo.active}'>
+<i :class='buttons.undo.icon' class='icon'></i>
+</button>
+</li>
+<li id='redo_sm'>
+<button :disabled='buttons.redo.disabled' @mousedown.stop.prevent='clickButton(buttons.redo)' v-bind:class='{&#39;active&#39;: buttons.redo.active}'>
+<i :class='buttons.redo.icon' class='icon'></i>
+</button>
+</li>
+</ul>
+</div>
+</script>
+
+
+
+<component :is='modal' :options.sync='modalOptions' :transition='modalTransition' transition-mode='out-in'></component>
+<component :is='modal2' :options.sync='modalOptions2' :transition='modalTransition2' transition-mode='out-in'></component>
+</body>
+</html>
