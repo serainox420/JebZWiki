@@ -1,0 +1,439 @@
+
+<!DOCTYPE html>
+<html>
+<head prefix='og: http://ogp.me/ns'>
+<script>
+  WWW_SUBDOMAIN = 'www';
+  
+  window.getCookie = function(key) {
+    var b = document.cookie.match('(^|;)\\s*' + key + '\\s*=\\s*([^;]+)');
+    return b ? decodeURIComponent(b.pop()).replace(/\+/g, " ") : '';
+  };
+</script>
+<script>
+  window['_fs_debug'] = false;
+  window['_fs_host'] = 'fullstory.com';
+  window['_fs_org'] = 'NGX3A';
+  window['_fs_namespace'] = 'FS';
+  (function(m,n,e,t,l,o,g,y){
+      if (e in m) {if(m.console && m.console.log) { m.console.log('FullStory namespace conflict. Please set window["_fs_namespace"].');} return;}
+      g=m[e]=function(a,b,s){g.q?g.q.push([a,b,s]):g._api(a,b,s);};g.q=[];
+      o=n.createElement(t);o.async=1;o.crossOrigin='anonymous';o.src='https://'+_fs_host+'/s/fs.js';
+      y=n.getElementsByTagName(t)[0];y.parentNode.insertBefore(o,y);
+      g.identify=function(i,v,s){g(l,{uid:i},s);if(v)g(l,v,s)};g.setUserVars=function(v,s){g(l,v,s)};g.event=function(i,v,s){g('event',{n:i,p:v},s)};
+      g.shutdown=function(){g("rec",!1)};g.restart=function(){g("rec",!0)};
+      g.log = function(a,b) { g("log", [a,b]) };
+      g.consent=function(a){g("consent",!arguments.length||a)};
+      g.identifyAccount=function(i,v){o='account';v=v||{};v.acctId=i;g(o,v)};
+      g.clearUserCookie=function(){};
+  })(window,document,window['_fs_namespace'],'script','user');
+  
+  if (!!getCookie('user.email')) {
+    FS.identify(getCookie('user.id'), {
+      displayName: getCookie('user.name') || getCookie('user.username'),
+      email: getCookie('user.email'),
+      organizationName: getCookie('organization.name'),
+    });
+  }
+</script>
+<script>
+  window.heap=window.heap||[],heap.load=function(e,t){window.heap.appid=e,window.heap.config=t=t||{};var r=t.forceSSL||"https:"===document.location.protocol,a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src=(r?"https:":"http:")+"//cdn.heapanalytics.com/js/heap-"+e+".js";var n=document.getElementsByTagName("script")[0];n.parentNode.insertBefore(a,n);for(var o=function(e){return function(){heap.push([e].concat(Array.prototype.slice.call(arguments,0)))}},p=["addEventProperties","addUserProperties","clearEventProperties","identify","resetIdentity","removeEventProperty","setEventProperties","track","unsetEventProperty"],c=0;c<p.length;c++)heap[p[c]]=o(p[c])}; heap.load("2632674204");
+</script>
+<script>
+  var b = document.cookie.match('(^|;)\\s*' + 'user.id' + '\\s*=\\s*([^;]+)');
+  var userId = b ? decodeURIComponent(b.pop()) : '';
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  
+  ga('create', 'UA-85457941-1', 'auto');
+  if (userId) { ga('set', 'userId', userId); }
+</script>
+<script>
+  ga('send', 'pageview'); // Send analytics.
+</script>
+<link href='/apple-touch-icon.png' rel='apple-touch-icon' sizes='180x180'>
+<link href='/favicon-32x32.png' rel='icon' sizes='32x32' type='image/png'>
+<link href='/favicon-16x16.png' rel='icon' sizes='16x16' type='image/png'>
+<link href='/site.webmanifest' rel='manifest'>
+<link color='#ff7f00' href='/safari-pinned-tab.svg' rel='mask-icon'>
+<meta content='#ffffff' name='theme-color'>
+<!--[if lt IE 9]>
+<script src="https://static.wikiful.com/assets/html5shiv.min.js"></script>
+<![endif]-->
+
+<meta content='text/html; charset=UTF-8' http-equiv='Content-Type'>
+<script crossorigin='anonymous' integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' src='https://code.jquery.com/jquery-3.3.1.min.js'></script>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet'>
+<title>Wikiful – better wikis for everyone</title>
+<meta name="description" content="Now you can build, edit, and share wikis from anywhere.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wikiful">
+<meta property="og:ttl" content="345600">
+<meta property="og:url" content="https://www.wikiful.com/">
+<meta property="og:title" content="Wikiful – better wikis for everyone">
+<meta property="og:image" content="https://media.wikiful.com/assets/wikiful-social-logo-300.png">
+<meta property="og:description" content="Now you can build, edit, and share wikis from anywhere.">
+<meta property="og:image:width" content="300">
+<meta property="og:image:height" content="300">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="Wikiful">
+<meta name="twitter:title" content="Wikiful – better wikis for everyone">
+<meta name="twitter:image" content="https://media.wikiful.com/assets/wikiful-social-logo-300.png">
+<meta name="twitter:description" content="Now you can build, edit, and share wikis from anywhere.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" media="all" href="https://static.wikiful.com/assets/marketing-b21b43377662c1049055444d4e71ad3fe5af205cbbb1ae2878c1d35d476135f7.css" />
+<script src="https://static.wikiful.com/assets/marketing-0aa5e7709a36e34412f6bbd7224e0a21ac07d7912ce8163b7c3343be27e24df1.js"></script>
+</head>
+<body>
+<div class='topnav'>
+<a class='brand' href='https://github.com/serainox420/JebZWiki/'>
+<img src="https://raw.githubusercontent.com/serainox420/JebZWiki/refs/heads/assety/Wiki-removebg-preview.png" />
+</a>
+<input class='menu-btn' id='menu-btn' type='checkbox'>
+<label class='menu-icon' for='menu-btn' id='vburger'>
+<span class='navicon'></span>
+</label>
+<nav role='navigation'>
+<a href='https://www.wikiful.com/#what'>What</a>
+<a href='https://www.wikiful.com/#why'>Why</a>
+<a href='https://www.wikiful.com/#how-much'>How Much</a>
+<a href='https://www.wikiful.com/#faq'>FAQ</a>
+<span class='divider'>
+|
+</span>
+<div id='logged-out'>
+<a href='/sign-in'>Sign In</a>
+</div>
+<div id='logged-in'>
+<div id='dropdown-toggle'>
+<div id='dropdown-menu'></div>
+</div>
+</div>
+</nav>
+</div>
+<div class='page-content'>
+<section class='hero'>
+<div class='content'>
+<div class='main'>
+<h1>
+Better wikis
+<br>
+For everyone
+</h1>
+<div class='icon icon-arrow'></div>
+<a class='button large' href='/sign-up'>Start Building</a>
+</div>
+<div class='cats'>
+<div class='icon icon-cat-team'></div>
+<div class='icon icon-cat-info'></div>
+<div class='icon icon-cat-business'></div>
+<div class='icon icon-cat-playing'></div>
+<div class='icon icon-cat-magnifying-glass'></div>
+</div>
+<div class='ph-badge'>
+<a href='https://www.producthunt.com/posts/wikiful?utm_source=badge-featured&amp;utm_medium=badge&amp;utm_souce=badge-wikiful' target='_blank'>
+<img alt='Wikiful - Pain-free wikis for individuals and teams. | Product Hunt Embed' height='54px' src='https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=165221&amp;theme=dark' style='width: 250px; height: 54px;' width='250px'>
+</a>
+</div>
+</div>
+</section>
+
+<section id='what'>
+<div class='background'></div>
+<div class='content'>
+<h2>What:</h2>
+<div class='blurb'>
+Now you can build, edit, and share wikis from anywhere.
+</div>
+<div class='slider'>
+<div class='slider-left'></div>
+<div class='slider-right'></div>
+<div class='siema'>
+<div class='slide number-1'>
+<div class='light-bg'></div>
+<div class='slide-content'>
+<h3>For Teams</h3>
+<div class='icon animation-pending icon-cat-team'></div>
+<div class='slide-blurb'>Snappy, crisp wikis for nimble teams.<br>&nbsp; No enterprise bulk + an editor with<br> serious horsepower.</div>
+<a class='button' href='https://www.wikiful.com/@demo/dev-team-welcome-wiki'>Team Demo</a>
+</div>
+</div>
+<div class='slide number-2'>
+<div class='light-bg'></div>
+<div class='slide-content'>
+<h3>For Teachers</h3>
+<div class='icon animation-pending icon-cat-info'></div>
+<div class='slide-blurb'>Organize, save, and share<br> your lessons / notes / curriculum.<br>&nbsp; Easy to use, no IT wizardry required.</div>
+<a class='button' href='https://www.wikiful.com/@demo/cloud-formation-project'>Teacher Demo</a>
+</div>
+</div>
+<div class='slide number-3'>
+<div class='light-bg'></div>
+<div class='slide-content'>
+<h3>For Entrepreneurs</h3>
+<div class='icon animation-pending icon-cat-business'></div>
+<div class='slide-blurb'>Goodbye crowded workspaces.<br>&nbsp; Fast, powerful, and intuitive for both<br> technical and non-technical founders.</div>
+<a class='button' href='https://www.wikiful.com/@demo/making-it-happen'>Entrepreneur Demo</a>
+</div>
+</div>
+<div class='slide number-4'>
+<div class='light-bg'></div>
+<div class='slide-content'>
+<h3>For Travelers</h3>
+<div class='icon animation-pending icon-cat-playing'></div>
+<div class='slide-blurb'>No more email digging and<br> last-second searching.&nbsp; All the info,<br> in one place, before you leave.</div>
+<a class='button' href='https://www.wikiful.com/@demo/chattanooga-trip-5-16-5-20'>Traveler Demo</a>
+</div>
+</div>
+<div class='slide number-5'>
+<div class='light-bg'></div>
+<div class='slide-content'>
+<h3>For Experts</h3>
+<div class='icon animation-pending icon-cat-magnifying-glass'></div>
+<div class='slide-blurb'>Structure your expertise, and<br> reference or share it in a snap.<br>&nbsp; Organization + collaboration.</div>
+<a class='button' href='https://www.wikiful.com/@demo/building-an-off-grid-cabin-by-hand'>Expert Demo</a>
+</div>
+</div>
+</div>
+</div>
+<div class='slider-nav'>
+<span>Teams</span>
+<span>Teachers</span>
+<span>Entrepreneurs</span>
+<span>Travelers</span>
+<span>Experts</span>
+</div>
+</div>
+</section>
+
+<section id='why'>
+<div class='background'></div>
+<div class='content'>
+<h2>Why:</h2>
+<div class='blurb'>
+You’re getting by, but there’s a better option.
+<br>
+Here's how Wikiful can fix your problem.
+</div>
+<div class='bubbles'>
+<div class='bubble'>
+<div class='bubble-cloud animation-pending timing2'>
+<img src="https://static.wikiful.com/assets/img/cloud1-8c29ea29d4a7b9f4615f8d5273e7c4f67687d77a14dee5f258d9c4a1e23fa2f0.png" />
+<h3>My team's using an annoying tool.</h3>
+</div>
+<div class='bubble-content'>
+<h4>
+My team doesn't like the wiki / documentation platform we currently
+use.&nbsp; It's clunky, slow, and painful.
+</h4>
+<p>
+Wikiful ditched the dead weight that makes using
+<br>
+enterprise wikis a chore.&nbsp; No more crowded workspace.&nbsp;
+<br>
+Edit-in-place without a reload.&nbsp; Runs 10x faster than
+<br>
+That Ubiquitous Enterprise Wiki Product.
+</p>
+</div>
+</div>
+<div class='bubble right-side'>
+<div class='bubble-content'>
+<h4>
+Every time I need to repeat something that I've already done, I have to reinvent the wheel.
+</h4>
+<p>
+Wikiful makes it easy to create documentation for your work and your life.&nbsp; That
+way you never have to waste mental energy figuring out what you've already figured
+out — whether that's setting up AWS, cooking a recipe, or
+<br>
+teaching a new semester.
+</p>
+</div>
+<div class='bubble-cloud animation-pending timing2'>
+<img src="https://static.wikiful.com/assets/img/cloud2-09339a2b50d1f8e52695c52f71d7043f36067567af56021c01a3c3e11d87b77d.png" />
+<h3>I’m wasting and repeating efforts.</h3>
+</div>
+</div>
+<div class='bubble'>
+<div class='bubble-cloud animation-pending timing2'>
+<img src="https://static.wikiful.com/assets/img/cloud3-6af985539b4eda8c253b812f70709eea8869ccc1f06479fcd685103f109f9f7a.png" />
+<h3 class='fix3'>Sharing is hard.</h3>
+</div>
+<div class='bubble-content'>
+<h4>
+When people ask me to share things, it's tough to get it to
+them.&nbsp; And to keep track of who sees what.
+</h4>
+<p>
+Share with a click, and loop in collaborators seamlessly.&nbsp; Wikiful
+makes it easy to grant as much — or as little — access to your wiki
+as you want.&nbsp; Keeping track of who can view and collaborate on
+your content is a breeze.
+</p>
+</div>
+</div>
+</div>
+<div class='actions'>
+<a class='button large white' href='/sign-up'>Sign Up</a>
+<a class='button large white' href='https://www.wikiful.com/@demo/dev-team-welcome-wiki'>Interactive Demo</a>
+</div>
+</div>
+</section>
+
+<section id='how-much2'>
+<div class='content'>
+<h2 id='how-much'>How Much:</h2>
+<div class='blurb'>
+Grab a plan that fits your needs.&nbsp; Switch anytime.
+</div>
+<div class='plans'>
+<div class='plan'>
+<h3>Free Plan</h3>
+<div class='price'>
+<div class='price-amount'>$0</div>
+<div class='price-month'>/month</div>
+</div>
+<div class='features'>
+1 wiki
+<br>
+Unlimited pages
+<br>
+Up to 5 collaborators
+</div>
+<a class='button' href='/sign-up?plan=free'>Sign up</a>
+</div>
+<div class='plan'>
+<h3>Advanced Plan</h3>
+<div class='price'>
+<div class='price-amount'>$10</div>
+<div class='price-month'>/month</div>
+</div>
+<div class='features'>
+One month free trial
+<br>
+Unlimited wikis & pages
+<br>
+Up to 10 collaborators
+</div>
+<a class='button' href='/sign-up?plan=advanced'>Sign up</a>
+</div>
+<div class='plan'>
+<h3>Business Plan</h3>
+<div class='price'>
+<div class='price-amount'>$10</div>
+<div class='price-month'>
+/month for 10 users
+<br>
++$5 per additional user
+</div>
+</div>
+<div class='features'>
+One month free trial
+<br>
+Unlimited wikis & pages
+<br>
+Grows with your team
+</div>
+<a class='button' href='/sign-up?plan=business'>Sign up</a>
+</div>
+</div>
+
+</div>
+</section>
+
+<section id='faq'>
+<div class='top-cat icon icon-cat-docs'></div>
+<div class='bottom-cat icon icon-cat-docs'></div>
+<div class='content'>
+<h2>FAQ:</h2>
+<div class='faq-block'>
+<h3>Why do I need a wiki?</h3>
+<p>
+For info that you need to access often, keep up-to-date, share, or
+collaborate on, a wiki performs better than alternative tools.&nbsp;
+Wikis are a great solution when people get frustrated that notes are
+too scattered, documents lack organization, and digging through
+emails is a pain.
+</p>
+<p>
+Check out our demos for examples of how wikis are great for
+<a href="https://www.wikiful.com/@demo/dev-team-welcome-wiki">retaining institutional knowledge</a>,
+<a href="https://www.wikiful.com/@demo/chattanooga-trip-5-16-5-20">tracking personal information</a>,
+<a href="https://www.wikiful.com/@demo/building-an-off-grid-cabin-by-hand">organizing creative projects</a>,
+and <a href="https://www.wikiful.com/@demo/making-it-happen">beyond</a>.
+</p>
+</div>
+<div class='faq-block'>
+<h3>Will my wikis be secure and private?</h3>
+<p>
+Yes and yes — you have complete control over who can view and
+collaborate on your wikis.
+</p>
+<p>
+Got a recipe wiki that you want to share widely?&nbsp; Make it public
+for anyone to view.&nbsp;
+<br>
+Created a wiki for an upcoming trip?&nbsp; Only grant access to the
+folks traveling with you.&nbsp;
+<br>
+Outlining your plans for the Great American Novel?&nbsp; Keep the
+wiki private and for-your-eyes-only.&nbsp;
+<br>
+You can make each wiki as public or as private as you want.
+</p>
+</div>
+<div class='faq-block'>
+<h3>Can I change plans later?</h3>
+<p>
+Yes.&nbsp; You can upgrade or downgrade your account at any time.
+</p>
+</div>
+<div class='faq-block'>
+<h3>What happens to my content if I cancel my account?</h3>
+<p>
+We hope that you'll love Wikiful and will want to keep your
+wikis alive and thriving.&nbsp;
+<br>
+But if you decide to close your account, you can use the "Export Wiki"
+feature to save a copy
+<br>
+of your wiki's content to your computer.
+</p>
+</div>
+<div class='faq-block'>
+<h3>Still have questions?</h3>
+<p>
+Please contact customer service at
+<a href="mailto:support@wikiful.com">support@wikiful.com</a>
+</p>
+</div>
+</div>
+</section>
+
+
+</div>
+<footer class='dark'>
+<div class='content'>
+<a href='https://www.kapowcorp.com/'>
+©
+2021
+KapowCorp, Inc.
+</a>
+<div class='footer-right'>
+<a href='https://www.wikiful.com/terms'>
+Terms
+<span class='extra'>of Service</span>
+</a>
+<a href='https://www.wikiful.com/privacy'>
+Privacy
+<span class='extra'>Policy</span>
+</a>
+<a href="mailto:support@wikiful.com">Contact</a>
+</div>
+</div>
+</footer>
+</body>
+</html>
